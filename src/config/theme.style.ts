@@ -31,5 +31,5 @@ export default {
   COLOR_BACKGROUND: 'rgb(55, 58, 60)',
   COLOR_HEADER: 'rgb(35, 38, 40)',
   COLOR_PRIMARY: 'rgb(238, 167, 2)',
-  COLOR_TINT: '#2f95dc',
+  COLOR_TINT: '#2f95dc'
 }
