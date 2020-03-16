@@ -1,9 +1,9 @@
-import React, { Children } from 'react'
+import React, { ReactNode } from 'react'
 import { View } from 'react-native'
 import styles from './styles'
 
 type Props = {
-    children: typeof Children
+    children: ReactNode
 }
 
 const Container = ({ children }: Props): JSX.Element => (
@@ -12,3 +12,5 @@ const Container = ({ children }: Props): JSX.Element => (
   </View>
 )
 export default Container
+
+
