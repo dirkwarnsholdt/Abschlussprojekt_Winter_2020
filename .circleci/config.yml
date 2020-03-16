@@ -49,10 +49,14 @@ jobs:
       - run:
           name: tsc type-checking && eslint
           command: |
-            npm i -D eslint@5.16.0 &&
-            npm i -D babel-eslint@10.0.2 &&
-            npm i -D eslint-plugin-react@7.14.2 &&
+            npm i -D eslint@6.8.0 &&
             npm i -D eslint-plugin-react-native@3.7.0 &&
+            npm i -D eslint-plugin-react@3.6.3 &&
+            npm i -D typescript@3.6.3 &&
+            npm i -D @typescript-eslint/parser@2.24.0 &&
+            npm i -D @typescript-eslint/eslint-plugin@2.24.0 &&
+            npm i -D @types/react@16.9.0 &&
+            npm i -D @types/react-native@0.60.23 &&
             npx eslint App.tsx && npx eslint ./src/* && npx typescript -p ./tsconfig.json
 workflows:
   version: 2.1
