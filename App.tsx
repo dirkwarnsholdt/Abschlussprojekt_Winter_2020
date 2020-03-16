@@ -1,20 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})
+import { Text } from 'react-native'
+import { Container } from './src/components/index'
 
 export default function App(): JSX.Element {
   return (
-    <View style={styles.container}>
+    <Container>
       <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    </Container>
   )
 }
-
