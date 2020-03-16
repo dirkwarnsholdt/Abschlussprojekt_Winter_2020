@@ -10,7 +10,5 @@ npm-debug.*
 web-build/
 web-report/
 
-.eslintrc.js
-
 # macOS
 .DS_Store
