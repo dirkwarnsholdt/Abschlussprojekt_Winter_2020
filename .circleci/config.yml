@@ -53,7 +53,7 @@ jobs:
             npm i -D babel-eslint@10.0.2 &&
             npm i -D eslint-plugin-react@7.14.2 &&
             npm i -D eslint-plugin-react-native@3.7.0 &&
-            npx eslint ./ && npx typescript -p ./tsconfig.json
+            npx eslint App.tsx && npx eslint ./src/* && npx typescript -p ./tsconfig.json
 workflows:
   version: 2.1
   android-build-test:
