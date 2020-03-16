@@ -57,7 +57,7 @@ jobs:
             npm i -D @typescript-eslint/eslint-plugin@2.24.0 &&
             npm i -D @types/react@16.9.0 &&
             npm i -D @types/react-native@0.60.23 &&
-            npx eslint App.tsx && npx eslint ./src/* && npx typescript -p ./tsconfig.json
+            npx eslint App.tsx && npx eslint ./src/**/* && npx typescript -p ./tsconfig.json
 workflows:
   version: 2.1
   android-build-test:
