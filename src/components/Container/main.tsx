@@ -12,5 +12,3 @@ const Container = ({ children }: Props): JSX.Element => (
   </View>
 )
 export default Container
-
-
