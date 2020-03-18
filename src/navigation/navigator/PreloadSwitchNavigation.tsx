@@ -1,11 +1,11 @@
 import { createSwitchNavigator, createAppContainer } from 'react-navigation'
-import App from '../../../App.tsx'
+import HomeScreen from '../../screens/home/HomeScreen.tsx'
 import LoadingScreen from '../../screens/_LoadingScreen/main'
 
 export default createAppContainer(createSwitchNavigator(
   {
     Loading: LoadingScreen,
-    App: App
+    App: HomeScreen
   },
   {
     initialRouteName: 'Loading',
