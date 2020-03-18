@@ -10,20 +10,20 @@ type Props = {
 const customText = ({ children, type }: Props): JSX.Element => {
   if (type === 'title' || type === 'Title') {
     return (
-      <Text {...styles.textTitle}>
+      <Text style={styles.textCaption}>
         {children}
       </Text>
     )
   }
   if (type === 'caption' || type === 'Caption') {
     return (
-      <Text {...styles.textCaption}>
+      <Text style={styles.textCaption}>
         {children}
       </Text>
     )
   }
   return (
-    <Text {...styles.textBody}>
+    <Text style={styles.textBody}>
       {children}
     </Text>
   )
