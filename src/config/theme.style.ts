@@ -5,7 +5,7 @@ export default {
   // Basic Font Options
   COLOR_TEXT: '#fffff0',
   FONT_FAMILY_TITLE: 'impact',
-  FONT_FAMILY_CAPTION: 'lato_lightitalic',
+  FONT_FAMILY_CAPTION: 'latoLightitalic',
   FONT_FAMILY_TEXT_ANDROID: 'Roboto',
   FONT_FAMILY_TEXT_IOS: 'robotoCondensed',
   FONT_FAMILY_TEXT: isIOS ? 'robotoCondensed' : 'Roboto',
