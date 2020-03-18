@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import styles from './styles'
 
 type Props = {
-    children: ReactNode
+    children?: ReactNode
 }
 
 const Container = ({ children }: Props): JSX.Element => (
