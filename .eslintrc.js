@@ -370,7 +370,7 @@ module.exports = {
         "@typescript-eslint/no-namespace": 2, //Disallow the use of custom TypeScript modules and namespaces
         "@typescript-eslint/no-non-null-assertion": 0, //Disallows non-null assertions using the ! postfix operator
         "@typescript-eslint/no-parameter-properties": 0, //Disallow the use of parameter properties in class constructors
-        "@typescript-eslint/no-require-imports": 2, //Disallows invocation of require()
+        "@typescript-eslint/no-require-imports": 0, //Disallows invocation of require()
         "@typescript-eslint/no-this-alias": 2, //Disallow aliasing this
         "@typescript-eslint/no-type-alias": 0, //Disallow the use of type aliases
         "@typescript-eslint/no-unnecessary-condition": 1, //Prevents conditionals where the type is always truthy or always falsy
