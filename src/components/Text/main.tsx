@@ -15,6 +15,7 @@ const customText = ({ children, type }: Props): JSX.Element => {
       </Text>
     )
   }
+
   if (type === 'caption' || type === 'Caption') {
     return (
       <Text style={styles.textCaption}>
