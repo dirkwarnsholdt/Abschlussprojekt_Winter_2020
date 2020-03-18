@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import styles from './styles'
+import Container from '../../components/Container/main'
+import Text from '../../components/Text/main'
+// import styles from './styles'
 
 class HomeScreen extends Component {
-  render() {
+  render(): JSX.Element {
     return (
       <Container>
         <Text type='title'>Title - Impact Font</Text>
