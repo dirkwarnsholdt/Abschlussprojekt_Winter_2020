@@ -7,8 +7,6 @@ Im Rahmen der Abschlussarbeit meiner Ausbildung zum Fachinformatiker entstanden.
 # TODO
 
 ### components
-* Text
-* Container
 * HS-Image
 * Header
 * Dynamic ScrollView
@@ -16,7 +14,6 @@ Im Rahmen der Abschlussarbeit meiner Ausbildung zum Fachinformatiker entstanden.
 
 
 ### Navigation
-* SwitchNavigation
 * DrawerNavigation
 * Icons for Drawer
 
