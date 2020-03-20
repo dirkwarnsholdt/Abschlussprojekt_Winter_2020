@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native'
 import theme from '../../config/theme.style'
 
-export default StyleSheet.create({
+const styles: any = StyleSheet.create({
   textTitle: {
     alignSelf: 'center',
     textAlign: 'center',
@@ -30,3 +30,5 @@ export default StyleSheet.create({
     color: theme.COLOR_IVORY
   }
 })
+
+export default styles
