@@ -1,5 +1,5 @@
 import React from 'react'
-import { createAppContainer } from 'react-navigation'
+import { NavigationContainer } from '@react-navigation/native'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { Dimensions } from 'react-native'
 import theme from '../../config/theme.style'
