@@ -7,16 +7,8 @@ Im Rahmen der Abschlussarbeit meiner Ausbildung zum Fachinformatiker entstanden.
 # TODO
 
 ### components
-* HS-Image
-* Header
 * Dynamic ScrollView
 * ErrorBoundary
-
-
-### Navigation
-* DrawerNavigation
-* Icons for Drawer
-
 
 ### UI
 * Home
@@ -27,7 +19,7 @@ Im Rahmen der Abschlussarbeit meiner Ausbildung zum Fachinformatiker entstanden.
 
 ### Test Env
 * TS typecheck
-* write basic Jest Tests
+* write basic Jest Tests --Implement in CircleCI Workflow
 
 ---
 
