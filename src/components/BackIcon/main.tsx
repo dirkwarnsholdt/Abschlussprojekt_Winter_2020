@@ -9,12 +9,12 @@ type Props = {
 }
 
 class BackIcon extends Component<Props> {
-  render() {
+  render(): JSX.Element {
     const { navigation } = this.props
     return (
       <TouchableOpacity
         key={BackIcon.id}
-        onPress={ () => navigation.goBack() }>
+        onPress={ (): JSX.Element => navigation.goBack() }>
         <Ionicons
           name={
             Platform.OS === 'ios'
