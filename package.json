@@ -9,6 +9,7 @@
     "test": " npx eslint App.tsx && npx eslint ./src/**/* --no-error-on-unmatched-pattern && npx typescript -p ./tsconfig.json"
   },
   "dependencies": {
+    "@react-navigation/drawer": "^5.3.2",
     "expo": "~36.0.0",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
