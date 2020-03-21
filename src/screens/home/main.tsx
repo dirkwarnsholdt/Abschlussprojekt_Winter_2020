@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
-import { Container, Header, HomeImage } from '../../components/index'
-import Text from '../../components/Text/main'
+import { Container, Header, HomeImage, Text } from '../../components/index'
 
 class HomeScreen extends Component {
   render(): JSX.Element {
