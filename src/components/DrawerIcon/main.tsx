@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import theme from '../../config/theme.style'
 import { TouchableOpacity } from 'react-native'
+import { withNavigation } from 'react-navigation'
+import { NavigationDrawerProp } from 'react-navigation-drawer'
 import { Feather } from '@expo/vector-icons'
-import { withNavigation, NavigationScreenProp } from 'react-navigation'
+import theme from '../../config/theme.style'
 
 type Props = {
-  navigation: NavigationScreenProp<any>
+  navigation: NavigationDrawerProp<any, any>
 }
 
 class DrawerIcon extends Component<Props> {
@@ -13,8 +14,7 @@ class DrawerIcon extends Component<Props> {
     const { navigation } = this.props
     return (
       <TouchableOpacity
-        key={DrawerIcon.id}
-        onPress={ (): null => navigation.openDrawer() }>
+        onPress={ (): any => navigation.openDrawer() }>
         <Feather
           name='menu'
           size={30}

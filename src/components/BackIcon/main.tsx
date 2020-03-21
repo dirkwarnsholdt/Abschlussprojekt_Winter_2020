@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons'
 import theme from '../../config/theme.style'
 
 type Props = {
-  navigation: NavigationScreenProp<any>
+  navigation: NavigationScreenProp<any, any>
 }
 
 class BackIcon extends Component<Props> {
@@ -13,8 +13,7 @@ class BackIcon extends Component<Props> {
     const { navigation } = this.props
     return (
       <TouchableOpacity
-        key={BackIcon.id}
-        onPress={ (): JSX.Element => navigation.goBack() }>
+        onPress={ (): any => navigation.goBack() }>
         <Ionicons
           name={
             Platform.OS === 'ios'
