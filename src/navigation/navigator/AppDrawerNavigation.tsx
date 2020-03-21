@@ -4,6 +4,7 @@ import { createDrawerNavigator } from 'react-navigation-drawer'
 import { Dimensions } from 'react-native'
 import theme from '../../config/theme.style'
 import TabBarIcon from '../../lib/TabBarIcon'
+import { DrawerItem } from '../../components/index'
 
 // Screens
 import HomeScreen from '../../screens/home/main'
@@ -16,6 +17,7 @@ const DrawerConfig = {
   drawerWidth: WIDTH * 0.60,
   drawerBackgroundColor: 'rgb(55, 58, 60)',
   overlayColor: 'rgb(35, 38, 40)',
+  contentComponent: (props: any): null => <DrawerItem {...props}/>,
 
   contentOptions: {
     activeBackgroundColor: 'rgb(238, 167, 2)',
