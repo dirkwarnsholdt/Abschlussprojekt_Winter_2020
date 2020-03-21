@@ -1,12 +1,11 @@
 import React from 'react'
+import { Image } from 'react-native'
 import styles from './styles'
 
-type Props = {
-
-}
-
-const Logo = (props: Props): JSX.Element => (
-
+const Logo = (): JSX.Element => (
+  <Image source={require('../../assets/ico/tsbwLogo.png')}
+    style={styles.headerLogo}
+    resizeMode='contain'/>
 )
 
 export default Logo
