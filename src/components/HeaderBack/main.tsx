@@ -4,7 +4,7 @@ import BackIcon from '../BackIcon/main'
 import styles from './styles'
 import Logo from '../Logo/main'
 
-class CustomHeader extends Component<> {
+class CustomHeader extends Component {
   render(): JSX.Element {
     return (
       <Header
