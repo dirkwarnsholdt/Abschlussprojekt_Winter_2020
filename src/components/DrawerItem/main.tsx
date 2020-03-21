@@ -7,8 +7,8 @@ import strings from '../../config/strings'
 import theme from '../../config/theme.style'
 
 class DrawerItem extends Component {
-  constructor() {
-    super()
+  constructor(props: any) {
+    super(props)
 
     this.state = {
       isFinishedSaving: false,
