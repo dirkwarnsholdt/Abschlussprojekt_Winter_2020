@@ -1,6 +1,6 @@
 import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
-import { createDrawerNavigator } from '@react-navigation/drawer'
+import { createAppContainer } from 'react-navigation'
+import { createDrawerNavigator } from 'react-navigation-drawer'
 import { Dimensions } from 'react-native'
 import theme from '../../config/theme.style'
 import TabBarIcon from '../../lib/TabBarIcon'
