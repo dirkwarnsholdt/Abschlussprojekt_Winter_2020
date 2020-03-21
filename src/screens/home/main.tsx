@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import { View } from 'react-native'
 import { Container, Header, HomeImage } from '../../components/index'
 import Text from '../../components/Text/main'
-// import styles from './styles'
 
 class HomeScreen extends Component {
   render(): JSX.Element {
     return (
       <Container>
+        <Header />
         <HomeImage />
         <View style={{ flex: 1 }}>
           <Text type='title'>Title - Impact Font</Text>
