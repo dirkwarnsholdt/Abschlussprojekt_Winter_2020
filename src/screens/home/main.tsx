@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
-import { Container, HomeImage } from '../../components/index'
+import { Container, Header, HomeImage } from '../../components/index'
 import Text from '../../components/Text/main'
 // import styles from './styles'
 
