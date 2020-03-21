@@ -306,7 +306,7 @@ module.exports = {
         "@typescript-eslint/consistent-type-assertions": [1, {
             assertionStyle: 'as'
         }], //Enforces consistent usage of type assertions.
-        "@typescript-eslint/consistent-type-definitions": [1, 'type'], //Consistent with type definition either interface or type
+        "@typescript-eslint/consistent-type-definitions": [0, 'type'], //Consistent with type definition either interface or type
         "@typescript-eslint/explicit-function-return-type": 2, //Require explicit return types on functions and class methods
         "@typescript-eslint/explicit-member-accessibility": [1, {
             accessibility: 'no-public'
