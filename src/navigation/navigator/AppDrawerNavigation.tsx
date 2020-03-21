@@ -38,7 +38,20 @@ const DrawerConfig = {
 }
 
 const AppDrawerNavigation = createDrawerNavigator<Props>({
-
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: {
+      header: null,
+      drawerLabel: 'Home',
+      drawerIcon: ({ focused }: boolean): JSX.Element => (
+        <TabBarIcon
+          class='MaterialIcons'
+          focused={focused}
+          name='home'
+        />
+      )
+    }
+  }
 },
 DrawerConfig
 )
