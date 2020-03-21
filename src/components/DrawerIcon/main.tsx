@@ -8,12 +8,12 @@ type Props = {
   navigation: NavigationScreenProp<any>
 }
 
-class MenuIcon extends Component<Props> {
+class DrawerIcon extends Component<Props> {
   render(): JSX.Element {
     const { navigation } = this.props
     return (
       <TouchableOpacity
-        key={MenuIcon.id}
+        key={DrawerIcon.id}
         onPress={ (): null => navigation.openDrawer() }>
         <Feather
           name='menu'
@@ -25,4 +25,4 @@ class MenuIcon extends Component<Props> {
   }
 }
 
-export default withNavigation(MenuIcon)
+export default withNavigation(DrawerIcon)
