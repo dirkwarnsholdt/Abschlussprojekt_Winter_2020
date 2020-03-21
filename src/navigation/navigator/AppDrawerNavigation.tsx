@@ -7,6 +7,8 @@ import TabBarIcon from '../../lib/TabBarIcon'
 
 // Screens
 import HomeScreen from '../../screens/home/main'
+import NewsScreen from '../../screens/news/main'
+import OfferScreen from '../../screens/offer/main'
 
 const WIDTH = Dimensions.get('window').width
 const DrawerConfig = {
@@ -48,6 +50,34 @@ const AppDrawerNavigation = createDrawerNavigator<Props>({
           class='MaterialIcons'
           focused={focused}
           name='home'
+        />
+      )
+    }
+  },
+  News: {
+    screen: NewsScreen,
+    navigationOptions: {
+      header: null,
+      drawerLabel: 'News',
+      drawerIcon: ({ focused }: boolean): JSX.Element => (
+        <TabBarIcon
+          class='MaterialCommunityIcons'
+          focused={focused}
+          name='newspaper'
+        />
+      )
+    }
+  },
+  Offer: {
+    screen: OfferScreen,
+    navigationOptions: {
+      header: null,
+      drawerLabel: 'Angebote',
+      drawerIcon: ({ focused }: boolean): JSX.Element => (
+        <TabBarIcon
+          class='MaterialIcons'
+          focused={focused}
+          name='local-offer'
         />
       )
     }
