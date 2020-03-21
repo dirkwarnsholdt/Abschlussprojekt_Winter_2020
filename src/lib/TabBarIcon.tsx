@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import { MaterialIcons, MaterialCommunityIcons, Feather } from '@expo/vector-icons'
 import theme from '../config/theme.style'
