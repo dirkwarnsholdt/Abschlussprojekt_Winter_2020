@@ -1,11 +1,19 @@
-import React, { Component } from 'react'
+import React, { Component, ReactNode} from 'react'
 import { SafeAreaView, StatusBar, View, ScrollView, Dimensions } from 'react-native'
 import styles from './styles'
 
 const { height } = Dimensions.get('window')
 
+type Props = {
+  children: ReactNode,
+  color: string
+}
 
-export default class DynamicScrollView extends Component {
+type State = {
+  screenHeight: number
+}
+
+export default class DynamicScrollView extends Component<Props, State> {
   constructor() {
     super()
 
@@ -14,11 +22,11 @@ export default class DynamicScrollView extends Component {
     }
   }
 
-  _handleContentSizeChange = (contentWidth, contentHeight) => {
+  _handleContentSizeChange: Function = (contentWidth: number, contentHeight: number): null => {
     this.setState({ screenHeight: contentHeight })
   }
 
-  render() {
+  render(): JSX.Element {
     const color = this.props.color
     const scrollEnabled = this.state.screenHeight > height
     return (
