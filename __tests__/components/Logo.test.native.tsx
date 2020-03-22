@@ -1,8 +1,10 @@
 import React from 'react'
 import { Logo } from '../../src/components/index'
-import renderer from 'react-test-renderer'
+import { mount } from 'enzyme'
 
-test('renders Logo correctly', () => {
-  const tree = renderer.create(<Logo />).toJSON()
-  expect(tree).toMatchSnapshot()
+describe('renders Logo correctly', () => {
+  it('should match Snapshot', () => {
+    const wrapper = mount(<Logo />)
+    expect(wrapper).toMatchSnapshot()
+  })
 })
