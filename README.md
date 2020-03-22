@@ -7,7 +7,6 @@ Im Rahmen der Abschlussarbeit meiner Ausbildung zum Fachinformatiker entstanden.
 # TODO
 
 ### components
-* Dynamic ScrollView
 * ErrorBoundary
 
 ### UI
@@ -15,11 +14,6 @@ Im Rahmen der Abschlussarbeit meiner Ausbildung zum Fachinformatiker entstanden.
 * News
 * Offer
 
----
-
-### Test Env
-* TS typecheck
-* write basic Jest Tests --Implement in CircleCI Workflow
 
 ---
 
