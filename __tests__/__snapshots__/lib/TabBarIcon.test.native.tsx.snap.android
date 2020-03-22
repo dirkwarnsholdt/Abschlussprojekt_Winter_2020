@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Feather/aperture correctly should match Snapshot 1`] = `
+<TabBarIcon
+  class="Feather"
+  focused={false}
+  name="aperture"
+>
+  <Icon
+    allowFontScaling={false}
+    color="#ccc"
+    name="aperture"
+    size={26}
+    style={
+      Object {
+        "marginBottom": -3,
+      }
+    }
+  >
+    <Text>
+      <Text />
+    </Text>
+  </Icon>
+</TabBarIcon>
+`;
+
+exports[`renders MaterialCommunityIcons/exponent correctly should match Snapshot 1`] = `
+<TabBarIcon
+  class="MaterialCommunityIcons"
+  focused={false}
+  name="exponent"
+>
+  <Icon
+    allowFontScaling={false}
+    color="#ccc"
+    name="exponent"
+    size={26}
+    style={
+      Object {
+        "marginBottom": -3,
+      }
+    }
+  >
+    <Text>
+      <Text />
+    </Text>
+  </Icon>
+</TabBarIcon>
+`;
+
+exports[`renders MaterialIcons/adb correctly should match Snapshot 1`] = `
+<TabBarIcon
+  class="MaterialIcons"
+  focused={false}
+  name="adb"
+>
+  <Icon
+    allowFontScaling={false}
+    color="#ccc"
+    name="adb"
+    size={26}
+    style={
+      Object {
+        "marginBottom": -3,
+      }
+    }
+  >
+    <Text>
+      <Text />
+    </Text>
+  </Icon>
+</TabBarIcon>
+`;
