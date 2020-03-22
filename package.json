@@ -11,7 +11,7 @@
     "jest:debug": "node --inspect-brk node_modules/jest/bin/jest.js --runInBand"
   },
   "jest": {
-    "preset": "jest-expo",
+    "preset": "jest-expo-enzyme",
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
     ]
@@ -41,6 +41,7 @@
     "eslint-plugin-react": "^3.6.3",
     "eslint-plugin-react-native": "^3.7.0",
     "jest-expo": "^36.0.1",
+    "jest-expo-enzyme": "^1.0.0",
     "react-test-renderer": "^16.13.1",
     "typescript": "^3.6.3"
   },
