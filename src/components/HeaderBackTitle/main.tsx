@@ -5,12 +5,12 @@ import styles from './styles'
 import theme from '../../config/theme.style'
 
 type Props = {
-  title: string
+  headerTitle: string
 }
 
 class CustomHeader extends Component<Props> {
   render(): JSX.Element {
-    const styleTitle = {
+    const styleTitle: any = {
       color: theme.COLOR_IVORY,
       fontFamily: theme.FONT_FAMILY_TITLE,
       fontSize: theme.FONT_SIZE_MEDIUM,
