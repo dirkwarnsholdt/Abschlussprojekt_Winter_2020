@@ -33,7 +33,7 @@ jobs:
           paths:
             - node_modules
 
-  test:
+  lint:
     docker:
       - image: circleci/node:10
     working_directory: ~/ProjektArbeit-FIAE
@@ -58,11 +58,38 @@ jobs:
             npm i -D @types/react@16.9.0 &&
             npm i -D @types/react-native@0.60.23 &&
             npx eslint App.tsx && npx eslint ./src/**/* --no-error-on-unmatched-pattern && npx typescript -p ./tsconfig.json
+
+  test:
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/ProjektArbeit-FIAE
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: ~/ProjektArbeit-FIAE
+
+      - restore_cache:
+          key: node_modules-{{ checksum "package-lock.json" }}
+
+      - run:
+          name: Jest-Enzyme Unit Tests
+          command: |
+            npm i -D @types/react@16.9.0 &&
+            npm i -D @types/react-native@0.60.23 &&
+            npm i -D jest-expo@36.0.1
+            npm i -D jest-expo-enzyme@1.0.0
+            npm i -D react-test-renderer@16.13.1
+            npm i -D sinon@9.0.1
+            npx jest
+
 workflows:
   version: 2.1
-  android-build-test:
+  android-build-lint-test:
     jobs:
+      - lint
       - test
       - build:
           requires:
+            - lint
             - test
