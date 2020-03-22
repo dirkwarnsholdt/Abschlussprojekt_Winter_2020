@@ -7,8 +7,8 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "test": " npx eslint App.tsx && npx eslint ./src/**/* --no-error-on-unmatched-pattern && npx typescript -p ./tsconfig.json",
-  "jest": "node_modules/.bin/jest",
-  "jest:debug": "node --inspect-brk node_modules/jest/bin/jest.js --runInBand"
+    "jest": "node_modules/.bin/jest",
+    "jest:debug": "node --inspect-brk node_modules/jest/bin/jest.js --runInBand"
   },
   "jest": {
     "preset": "jest-expo"
@@ -38,6 +38,7 @@
     "eslint-plugin-react": "^3.6.3",
     "eslint-plugin-react-native": "^3.7.0",
     "jest-expo": "^36.0.1",
+    "react-test-renderer": "^16.13.1",
     "typescript": "^3.6.3"
   },
   "private": true
