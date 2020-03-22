@@ -82,7 +82,7 @@ jobs:
             npm i -D jest-expo-enzyme@1.0.0 &&
             npm i -D react-test-renderer@16.13.1 &&
             npm i -D sinon@9.0.1 &&
-            npx jest ./
+            npx jest ./ --maxWorkers=2
 
 workflows:
   version: 2.1
