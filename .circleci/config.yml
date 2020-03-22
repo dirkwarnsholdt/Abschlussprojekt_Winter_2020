@@ -88,9 +88,9 @@ workflows:
   version: 2.1
   android-build-lint-test:
     jobs:
-      - lint
       - test
+      - lint
       - build:
           requires:
-            - lint
             - test
+            - lint
