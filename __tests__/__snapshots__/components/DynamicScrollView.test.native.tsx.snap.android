@@ -5,7 +5,7 @@ exports[`renders DynamicScrollView-Body correctly should match Snapshot 1`] = `
   <SafeAreaView
     style={
       Object {
-        "backgroundColor": undefined,
+        "backgroundColor": "rgb(55, 58, 60)",
         "flex": 1,
       }
     }
@@ -13,7 +13,7 @@ exports[`renders DynamicScrollView-Body correctly should match Snapshot 1`] = `
     <View
       style={
         Object {
-          "backgroundColor": undefined,
+          "backgroundColor": "rgb(55, 58, 60)",
           "flex": 1,
         }
       }
@@ -21,7 +21,7 @@ exports[`renders DynamicScrollView-Body correctly should match Snapshot 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": undefined,
+            "backgroundColor": "rgb(55, 58, 60)",
             "flex": 1,
           }
         }
