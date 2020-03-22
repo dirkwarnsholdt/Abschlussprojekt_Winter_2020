@@ -15,7 +15,16 @@
     "preset": "jest-expo-enzyme",
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
-    ]
+    ],
+    "roots": [
+    "<rootDir>"
+  ],
+  "modulePaths": [
+    "<rootDir>"
+  ],
+  "moduleDirectories": [
+    "node_modules"
+  ]
   },
   "dependencies": {
     "expo": "~36.0.0",
