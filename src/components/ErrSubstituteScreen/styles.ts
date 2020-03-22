@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
   },
   errorContainer: {
     flex: 1,
-    marginHorizontal: 12
+    marginHorizontal: 12,
+    backgroundColor: theme.ERROR_BACKGROUND
   }
 })
 
