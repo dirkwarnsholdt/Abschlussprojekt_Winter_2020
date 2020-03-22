@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Container correctly should match Snapshot 1`] = `
+<Container>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgb(55, 58, 60)",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgb(55, 58, 60)",
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+        }
+      }
+    >
+       Text which gets rendered as Child 
+    </View>
+  </View>
+</Container>
+`;
