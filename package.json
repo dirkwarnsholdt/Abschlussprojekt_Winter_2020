@@ -6,7 +6,12 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": " npx eslint App.tsx && npx eslint ./src/**/* --no-error-on-unmatched-pattern && npx typescript -p ./tsconfig.json"
+    "test": " npx eslint App.tsx && npx eslint ./src/**/* --no-error-on-unmatched-pattern && npx typescript -p ./tsconfig.json",
+  "jest": "node_modules/.bin/jest",
+  "jest:debug": "node --inspect-brk node_modules/jest/bin/jest.js --runInBand"
+  },
+  "jest": {
+    "preset": "jest-expo"
   },
   "dependencies": {
     "expo": "~36.0.0",
