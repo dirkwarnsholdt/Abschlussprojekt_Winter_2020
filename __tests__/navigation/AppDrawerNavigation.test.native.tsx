@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppDrawerNavigation } from '../../src/navigation/index'
+import { AppDrawerNavigation } from '../../src/navigation/index.ts'
 import { shallow } from 'enzyme'
 
 describe('renders AppDrawerNavigation correctly', () => {

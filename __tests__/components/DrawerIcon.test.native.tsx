@@ -1,5 +1,5 @@
 import React from 'react'
-import { DrawerIcon } from '../../src/components/index'
+import { DrawerIcon } from '../../src/components/index.ts'
 import { shallow } from 'enzyme'
 
 describe('renders DrawerIcon correctly', () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '../../src/components/index'
+import { Text } from '../../src/components/index.ts'
 import { mount } from 'enzyme'
 
 describe('renders Text-Body correctly', () => {

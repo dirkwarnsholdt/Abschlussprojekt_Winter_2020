@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeScreen from '../../src/screens/home/main'
+import HomeScreen from '../../src/screens/home/main.tsx'
 import { shallow } from 'enzyme'
 
 describe('renders MaterialIcons/adb correctly', () => {

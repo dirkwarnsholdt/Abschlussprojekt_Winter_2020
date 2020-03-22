@@ -1,5 +1,5 @@
 import React from 'react'
-import { PreloadSwitchNavigation } from '../../src/navigation/index'
+import { PreloadSwitchNavigation } from '../../src/navigation/index.ts'
 import { shallow } from 'enzyme'
 
 describe('renders PreloadSwitchNavigation correctly', () => {

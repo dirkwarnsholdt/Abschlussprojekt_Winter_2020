@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeaderBackTitle } from '../../src/components/index'
+import { HeaderBackTitle } from '../../src/components/index.ts'
 import { shallow } from 'enzyme'
 
 describe('renders HeaderBackTitle correctly', () => {

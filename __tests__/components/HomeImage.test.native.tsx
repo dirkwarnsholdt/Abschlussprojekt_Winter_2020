@@ -1,5 +1,5 @@
 import React from 'react'
-import { HomeImage } from '../../src/components/index'
+import { HomeImage } from '../../src/components/index.ts'
 import { mount } from 'enzyme'
 
 describe('renders HomeImage correctly', () => {

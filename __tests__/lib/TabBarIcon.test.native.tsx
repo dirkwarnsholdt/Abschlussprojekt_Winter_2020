@@ -1,5 +1,5 @@
 import React from 'react'
-import TabBarIcon from '../../src/lib/TabBarIcon'
+import TabBarIcon from '../../src/lib/TabBarIcon.tsx'
 import { mount } from 'enzyme'
 
 describe('renders MaterialIcons/adb correctly', () => {

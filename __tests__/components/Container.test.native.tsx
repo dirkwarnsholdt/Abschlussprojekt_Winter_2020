@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '../../src/components/index'
+import { Container } from '../../src/components/index.ts'
 import { mount } from 'enzyme'
 
 describe('renders Container correctly', () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BackIcon } from '../../src/components/index'
+import { BackIcon } from '../../src/components/index.ts'
 import { shallow } from 'enzyme'
 
 describe('renders BackIcon correctly', () => {

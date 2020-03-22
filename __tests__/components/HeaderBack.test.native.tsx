@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeaderBack } from '../../src/components/index'
+import { HeaderBack } from '../../src/components/index.ts'
 import { shallow } from 'enzyme'
 
 describe('renders HeaderBack correctly', () => {

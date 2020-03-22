@@ -1,5 +1,5 @@
 import React from 'react'
-import { Logo } from '../../src/components/index'
+import { Logo } from '../../src/components/index.ts'
 import { mount } from 'enzyme'
 
 describe('renders Logo correctly', () => {
