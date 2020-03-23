@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders NewsScreen correctly should match Snapshot 1`] = `
+exports[`renders OfferScreen correctly should match Snapshot 1`] = `
 <Container>
   <CustomHeader />
   <View
@@ -70,7 +70,7 @@ Das Fest beginnt um 13:00 Uhr im Freizeithaus.",
       onEndReachedThreshold={2}
       onRefresh={[Function]}
       refreshing={false}
-      removeClippedSubviews={false}
+      removeClippedSubviews={true}
       renderItem={[Function]}
       scrollEventThrottle={50}
       updateCellsBatchingPeriod={50}

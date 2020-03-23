@@ -12,9 +12,9 @@ class CustomHeader extends Component<Props> {
   render(): JSX.Element {
     const styleTitle: any = {
       color: theme.COLOR_IVORY,
-      fontFamily: theme.FONT_FAMILY_TITLE,
+      fontFamily: theme.FONT_FAMILY_CAPTION,
       fontSize: theme.FONT_SIZE_MEDIUM,
-      fontWeight: theme.FONT_WEIGHT_LIGHT
+      fontWeight: theme.FONT_WEIGHT_MEDIUM
     }
 
 

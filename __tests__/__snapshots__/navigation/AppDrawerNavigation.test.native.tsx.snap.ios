@@ -27,8 +27,33 @@ exports[`renders AppDrawerNavigation correctly should match Snapshot 1`] = `
         "router": Object {
           "childRouters": Object {
             "Home": null,
-            "News": null,
-            "Offer": null,
+            "News": Object {
+              "childRouters": Object {
+                "DetailScreen": null,
+                "NewsScreen": null,
+              },
+              "getActionCreators": [Function],
+              "getActionForPathAndParams": [Function],
+              "getComponentForRouteName": [Function],
+              "getComponentForState": [Function],
+              "getPathAndParamsForState": [Function],
+              "getScreenOptions": [Function],
+              "getStateForAction": [Function],
+            },
+            "Offer": Object {
+              "childRouters": Object {
+                "DetailScreen": null,
+                "OfferDetailsScreen": null,
+                "OfferScreen": null,
+              },
+              "getActionCreators": [Function],
+              "getActionForPathAndParams": [Function],
+              "getComponentForRouteName": [Function],
+              "getComponentForState": [Function],
+              "getPathAndParamsForState": [Function],
+              "getScreenOptions": [Function],
+              "getStateForAction": [Function],
+            },
           },
           "getActionCreators": [Function],
           "getActionForPathAndParams": [Function],
@@ -50,14 +75,30 @@ exports[`renders AppDrawerNavigation correctly should match Snapshot 1`] = `
               "routeName": "Home",
             },
             Object {
+              "index": 0,
+              "isTransitioning": false,
               "key": "News",
               "params": undefined,
               "routeName": "News",
+              "routes": Array [
+                Object {
+                  "key": "id-1584953625473-0",
+                  "routeName": "NewsScreen",
+                },
+              ],
             },
             Object {
+              "index": 0,
+              "isTransitioning": false,
               "key": "Offer",
               "params": undefined,
               "routeName": "Offer",
+              "routes": Array [
+                Object {
+                  "key": "id-1584953625473-1",
+                  "routeName": "OfferScreen",
+                },
+              ],
             },
           ],
         },
@@ -88,8 +129,33 @@ exports[`renders AppDrawerNavigation correctly should match Snapshot 1`] = `
           "router": Object {
             "childRouters": Object {
               "Home": null,
-              "News": null,
-              "Offer": null,
+              "News": Object {
+                "childRouters": Object {
+                  "DetailScreen": null,
+                  "NewsScreen": null,
+                },
+                "getActionCreators": [Function],
+                "getActionForPathAndParams": [Function],
+                "getComponentForRouteName": [Function],
+                "getComponentForState": [Function],
+                "getPathAndParamsForState": [Function],
+                "getScreenOptions": [Function],
+                "getStateForAction": [Function],
+              },
+              "Offer": Object {
+                "childRouters": Object {
+                  "DetailScreen": null,
+                  "OfferDetailsScreen": null,
+                  "OfferScreen": null,
+                },
+                "getActionCreators": [Function],
+                "getActionForPathAndParams": [Function],
+                "getComponentForRouteName": [Function],
+                "getComponentForState": [Function],
+                "getPathAndParamsForState": [Function],
+                "getScreenOptions": [Function],
+                "getStateForAction": [Function],
+              },
             },
             "getActionCreators": [Function],
             "getActionForPathAndParams": [Function],
@@ -111,14 +177,30 @@ exports[`renders AppDrawerNavigation correctly should match Snapshot 1`] = `
                 "routeName": "Home",
               },
               Object {
+                "index": 0,
+                "isTransitioning": false,
                 "key": "News",
                 "params": undefined,
                 "routeName": "News",
+                "routes": Array [
+                  Object {
+                    "key": "id-1584953625473-0",
+                    "routeName": "NewsScreen",
+                  },
+                ],
               },
               Object {
+                "index": 0,
+                "isTransitioning": false,
                 "key": "Offer",
                 "params": undefined,
                 "routeName": "Offer",
+                "routes": Array [
+                  Object {
+                    "key": "id-1584953625473-1",
+                    "routeName": "OfferScreen",
+                  },
+                ],
               },
             ],
           },

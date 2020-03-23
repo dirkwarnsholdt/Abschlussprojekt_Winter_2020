@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders NewsScreen correctly should match Snapshot 1`] = `
+exports[`renders OfferScreen correctly should match Snapshot 1`] = `
 <Container>
   <CustomHeader />
   <View
