@@ -44,14 +44,13 @@ class OfferScreen extends PureComponent<Props, State> {
   // for performance (prevents rerendering of whole screen once something changes)
   _keyExtractor: any = (item: any) => item.id.toString()
 
-  // redirects to Detail
-  _onPressItem: any = (id: number, title: string) => {
-    this.props.navigation.navigate('DetailScreen', {
+  // redirects to OfferDetail with according index for last /segment
+  _onPressItem: any = (id: number, title: string): any => {
+    this.props.navigation.navigate('OfferDetailsScreen', {
       itemID: id,
       itemTitle: title,
       detailData: this.state.jsonData,
-      styleParam: 'news',
-      type: 'news'
+      type: 'offer'
     })
   }
 
