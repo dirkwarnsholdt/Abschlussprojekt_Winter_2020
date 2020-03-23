@@ -1,122 +1,595 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders OfferStackNavigation correctly should match Snapshot 1`] = `
-<ContextProvider
-  value="light"
+<GestureHandlerRootView
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
 >
-  <ContextProvider
-    value={
+  <RNCSafeAreaView
+    onInsetsChange={[Function]}
+    style={
       Object {
-        "_childrenNavigation": Object {},
-        "actions": Object {
-          "dismiss": [Function],
-          "pop": [Function],
-          "popToTop": [Function],
-          "push": [Function],
-          "replace": [Function],
-          "reset": [Function],
-        },
-        "addListener": [Function],
-        "dangerouslyGetParent": [Function],
-        "dismiss": [Function],
-        "dispatch": [Function],
-        "getChildNavigation": [Function],
-        "getScreenProps": [Function],
-        "goBack": [Function],
-        "isFirstRouteInParent": [Function],
-        "isFocused": [Function],
-        "navigate": [Function],
-        "pop": [Function],
-        "popToTop": [Function],
-        "push": [Function],
-        "replace": [Function],
-        "reset": [Function],
-        "router": Object {
-          "childRouters": Object {
-            "DetailScreen": null,
-            "OfferDetailsScreen": null,
-            "OfferScreen": null,
-          },
-          "getActionCreators": [Function],
-          "getActionForPathAndParams": [Function],
-          "getComponentForRouteName": [Function],
-          "getComponentForState": [Function],
-          "getPathAndParamsForState": [Function],
-          "getScreenOptions": [Function],
-          "getStateForAction": [Function],
-        },
-        "setParams": [Function],
-        "state": Object {
-          "index": 0,
-          "isTransitioning": false,
-          "key": "StackRouterRoot",
-          "routes": Array [
-            Object {
-              "key": "id-1584952432367-0",
-              "routeName": "OfferScreen",
-            },
-          ],
-        },
+        "flex": 1,
       }
     }
   >
-    <Navigator
-      navigation={
+    <View
+      onLayout={[Function]}
+      style={
         Object {
-          "_childrenNavigation": Object {},
-          "actions": Object {
-            "dismiss": [Function],
-            "pop": [Function],
-            "popToTop": [Function],
-            "push": [Function],
-            "replace": [Function],
-            "reset": [Function],
-          },
-          "addListener": [Function],
-          "dangerouslyGetParent": [Function],
-          "dismiss": [Function],
-          "dispatch": [Function],
-          "getChildNavigation": [Function],
-          "getScreenProps": [Function],
-          "goBack": [Function],
-          "isFirstRouteInParent": [Function],
-          "isFocused": [Function],
-          "navigate": [Function],
-          "pop": [Function],
-          "popToTop": [Function],
-          "push": [Function],
-          "replace": [Function],
-          "reset": [Function],
-          "router": Object {
-            "childRouters": Object {
-              "DetailScreen": null,
-              "OfferDetailsScreen": null,
-              "OfferScreen": null,
-            },
-            "getActionCreators": [Function],
-            "getActionForPathAndParams": [Function],
-            "getComponentForRouteName": [Function],
-            "getComponentForState": [Function],
-            "getPathAndParamsForState": [Function],
-            "getScreenOptions": [Function],
-            "getStateForAction": [Function],
-          },
-          "setParams": [Function],
-          "state": Object {
-            "index": 0,
-            "isTransitioning": false,
-            "key": "StackRouterRoot",
-            "routes": Array [
-              Object {
-                "key": "id-1584952432367-0",
-                "routeName": "OfferScreen",
-              },
-            ],
-          },
+          "flex": 1,
+          "overflow": "hidden",
         }
       }
-      theme="light"
-    />
-  </ContextProvider>
-</ContextProvider>
+    >
+      <View
+        pointerEvents="box-none"
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <View
+          accessibilityElementsHidden={false}
+          closing={false}
+          gestureVelocityImpact={0.3}
+          importantForAccessibility="auto"
+          onClose={[Function]}
+          onGestureBegin={[Function]}
+          onGestureCanceled={[Function]}
+          onOpen={[Function]}
+          onTransitionStart={[Function]}
+          pointerEvents="box-none"
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+          transitionSpec={
+            Object {
+              "close": Object {
+                "animation": "timing",
+                "config": Object {
+                  "duration": 150,
+                  "easing": [Function],
+                },
+              },
+              "open": Object {
+                "animation": "timing",
+                "config": Object {
+                  "duration": 350,
+                  "easing": [Function],
+                },
+              },
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+          <View
+            pointerEvents="box-none"
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              onGestureHandlerEvent={[Function]}
+              onGestureHandlerStateChange={[Function]}
+              style={
+                Object {
+                  "flex": 1,
+                  "opacity": 1,
+                  "transform": Array [
+                    Object {
+                      "translateY": 0,
+                    },
+                  ],
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "rgb(242, 242, 242)",
+                    "flex": 1,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                      "flexDirection": "column-reverse",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "rgb(55, 58, 60)",
+                          "flex": 1,
+                          "flexDirection": "column",
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <View
+                        accessibilityIgnoresInvertColors={true}
+                        style={
+                          Object {
+                            "alignContent": "center",
+                            "alignItems": "center",
+                            "backgroundColor": "rgb(35, 38, 40)",
+                            "borderBottomColor": "#f2f2f2",
+                            "borderBottomWidth": 0.5,
+                            "flexDirection": "row",
+                            "height": 98,
+                            "justifyContent": "center",
+                            "paddingHorizontal": 10,
+                            "paddingTop": 42,
+                          }
+                        }
+                      >
+                        <Image
+                          style={
+                            Object {
+                              "bottom": 0,
+                              "height": 98,
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                              "width": undefined,
+                            }
+                          }
+                          testID="headerContainer"
+                        />
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "flex-start",
+                              "flex": 1,
+                            }
+                          }
+                        >
+                          <View
+                            accessible={true}
+                            focusable={true}
+                            isTVSelectable={true}
+                            onClick={[Function]}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text />
+                          </View>
+                        </View>
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "flex": 3,
+                            }
+                          }
+                        >
+                          <Image
+                            resizeMode="contain"
+                            source={1}
+                            style={
+                              Object {
+                                "alignSelf": "center",
+                                "height": 45,
+                              }
+                            }
+                          />
+                        </View>
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "flex-end",
+                              "flex": 1,
+                            }
+                          }
+                        />
+                      </View>
+                      <View
+                        style={
+                          Object {
+                            "alignContent": "center",
+                            "alignItems": "stretch",
+                            "flex": 1,
+                            "justifyContent": "center",
+                            "textAlign": "center",
+                          }
+                        }
+                      >
+                        <RCTScrollView
+                          ItemSeparatorComponent={[Function]}
+                          contentContainerStyle={
+                            Object {
+                              "flexGrow": 1,
+                            }
+                          }
+                          data={
+                            Array [
+                              Object {
+                                "content": "Liebe BvB-ler*innen, Mitarbeiter*innen und Gäste,
+
+wir laden Sie/Euch herzlich zu unserem Abschlussfest am Dienstag, 25.6.2019 ein, um unseren Abschluss der BvB zu feiern und schön ausklingen zulassen.
+
+Das Fest beginnt um 13:00 Uhr im Freizeithaus.",
+                                "created_at": "2019-05-08 14:49:29",
+                                "edited_by": 2,
+                                "id": 6,
+                                "title": "Abschlussfest der BvB",
+                                "updated_at": "2019-08-09 09:05:05",
+                              },
+                              Object {
+                                "content": "Liebe BvB-ler*innen, Mitarbeiter*innen und Gäste,
+
+wir laden Sie/Euch herzlich zu unserem Abschlussfest am Dienstag, 25.6.2019 ein, um unseren Abschluss der BvB zu feiern und schön ausklingen zulassen.
+
+Das Fest beginnt um 13:00 Uhr im Freizeithaus.",
+                                "created_at": "2019-05-08 14:49:29",
+                                "edited_by": 2,
+                                "id": 8,
+                                "title": "xxxxxxxxxxxxxxxxxx",
+                                "updated_at": "2019-08-09 09:05:05",
+                              },
+                              Object {
+                                "content": "Liebe BvB-ler*innen, Mitarbeiter*innen und Gäste,
+
+wir laden Sie/Euch herzlich zu unserem Abschlussfest am Dienstag, 25.6.2019 ein, um unseren Abschluss der BvB zu feiern und schön ausklingen zulassen.
+
+Das Fest beginnt um 13:00 Uhr im Freizeithaus.",
+                                "created_at": "2019-05-08 14:49:29",
+                                "edited_by": 2,
+                                "id": 11,
+                                "title": "yyyyyyyyyyyyyyyyyyyyy",
+                                "updated_at": "2019-08-09 09:05:05",
+                              },
+                            ]
+                          }
+                          disableVirtualization={false}
+                          getItem={[Function]}
+                          getItemCount={[Function]}
+                          horizontal={false}
+                          initialNumToRender={10}
+                          keyExtractor={[Function]}
+                          maxToRenderPerBatch={10}
+                          numColumns={1}
+                          onContentSizeChange={[Function]}
+                          onEndReachedThreshold={2}
+                          onLayout={[Function]}
+                          onMomentumScrollEnd={[Function]}
+                          onRefresh={[Function]}
+                          onScroll={[Function]}
+                          onScrollBeginDrag={[Function]}
+                          onScrollEndDrag={[Function]}
+                          refreshControl={
+                            <RefreshControlMock
+                              onRefresh={[Function]}
+                              refreshing={false}
+                            />
+                          }
+                          refreshing={false}
+                          removeClippedSubviews={true}
+                          renderItem={[Function]}
+                          scrollEventThrottle={50}
+                          stickyHeaderIndices={Array []}
+                          updateCellsBatchingPeriod={50}
+                          viewabilityConfigCallbackPairs={Array []}
+                          windowSize={21}
+                        >
+                          <RCTRefreshControl />
+                          <View>
+                            <View
+                              onLayout={[Function]}
+                              style={null}
+                            >
+                              <View
+                                accessible={true}
+                                focusable={true}
+                                isTVSelectable={true}
+                                onClick={[Function]}
+                                onResponderGrant={[Function]}
+                                onResponderMove={[Function]}
+                                onResponderRelease={[Function]}
+                                onResponderTerminate={[Function]}
+                                onResponderTerminationRequest={[Function]}
+                                onStartShouldSetResponder={[Function]}
+                                style={
+                                  Object {
+                                    "opacity": 1,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "borderRadius": 4,
+                                      "flex": 1,
+                                      "justifyContent": "center",
+                                      "paddingBottom": 25,
+                                      "textAlign": "center",
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    style={
+                                      Object {
+                                        "alignSelf": "center",
+                                        "color": "rgb(238, 167, 2)",
+                                        "fontFamily": "latoLightitalic",
+                                        "fontSize": 26,
+                                        "fontStyle": "normal",
+                                        "fontWeight": "600",
+                                        "marginTop": 22,
+                                        "textAlign": "center",
+                                      }
+                                    }
+                                  >
+                                    Abschlussfest der BvB
+                                  </Text>
+                                  <Text
+                                    ellipsizeMode="tail"
+                                    numberOfLines={2}
+                                    style={
+                                      Object {
+                                        "alignSelf": "center",
+                                        "color": "rgb(238, 167, 2)",
+                                        "display": "flex",
+                                        "fontFamily": "Roboto",
+                                        "fontSize": 15,
+                                        "fontStyle": "normal",
+                                        "fontWeight": "300",
+                                        "marginTop": -5,
+                                        "textAlign": "center",
+                                      }
+                                    }
+                                  >
+                                    Liebe BvB-ler*innen, Mitarbeiter*innen und Gäste,
+
+wir laden Sie/Euch herzlich zu unserem Abschlussfest am Dienstag, 25.6.2019 ein, um unseren Abschluss der BvB zu feiern und schön ausklingen zulassen.
+
+Das Fest beginnt um 13:00 Uhr im Freizeithaus.
+                                  </Text>
+                                </View>
+                              </View>
+                              <View
+                                style={
+                                  Object {
+                                    "borderColor": "rgb(159,161,163)",
+                                    "borderWidth": 0.5,
+                                    "width": 750,
+                                  }
+                                }
+                              />
+                            </View>
+                            <View
+                              onLayout={[Function]}
+                              style={null}
+                            >
+                              <View
+                                accessible={true}
+                                focusable={true}
+                                isTVSelectable={true}
+                                onClick={[Function]}
+                                onResponderGrant={[Function]}
+                                onResponderMove={[Function]}
+                                onResponderRelease={[Function]}
+                                onResponderTerminate={[Function]}
+                                onResponderTerminationRequest={[Function]}
+                                onStartShouldSetResponder={[Function]}
+                                style={
+                                  Object {
+                                    "opacity": 1,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "borderRadius": 4,
+                                      "flex": 1,
+                                      "justifyContent": "center",
+                                      "paddingBottom": 25,
+                                      "textAlign": "center",
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    style={
+                                      Object {
+                                        "alignSelf": "center",
+                                        "color": "rgb(238, 167, 2)",
+                                        "fontFamily": "latoLightitalic",
+                                        "fontSize": 26,
+                                        "fontStyle": "normal",
+                                        "fontWeight": "600",
+                                        "marginTop": 22,
+                                        "textAlign": "center",
+                                      }
+                                    }
+                                  >
+                                    xxxxxxxxxxxxxxxxxx
+                                  </Text>
+                                  <Text
+                                    ellipsizeMode="tail"
+                                    numberOfLines={2}
+                                    style={
+                                      Object {
+                                        "alignSelf": "center",
+                                        "color": "rgb(238, 167, 2)",
+                                        "display": "flex",
+                                        "fontFamily": "Roboto",
+                                        "fontSize": 15,
+                                        "fontStyle": "normal",
+                                        "fontWeight": "300",
+                                        "marginTop": -5,
+                                        "textAlign": "center",
+                                      }
+                                    }
+                                  >
+                                    Liebe BvB-ler*innen, Mitarbeiter*innen und Gäste,
+
+wir laden Sie/Euch herzlich zu unserem Abschlussfest am Dienstag, 25.6.2019 ein, um unseren Abschluss der BvB zu feiern und schön ausklingen zulassen.
+
+Das Fest beginnt um 13:00 Uhr im Freizeithaus.
+                                  </Text>
+                                </View>
+                              </View>
+                              <View
+                                style={
+                                  Object {
+                                    "borderColor": "rgb(159,161,163)",
+                                    "borderWidth": 0.5,
+                                    "width": 750,
+                                  }
+                                }
+                              />
+                            </View>
+                            <View
+                              onLayout={[Function]}
+                              style={null}
+                            >
+                              <View
+                                accessible={true}
+                                focusable={true}
+                                isTVSelectable={true}
+                                onClick={[Function]}
+                                onResponderGrant={[Function]}
+                                onResponderMove={[Function]}
+                                onResponderRelease={[Function]}
+                                onResponderTerminate={[Function]}
+                                onResponderTerminationRequest={[Function]}
+                                onStartShouldSetResponder={[Function]}
+                                style={
+                                  Object {
+                                    "opacity": 1,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "borderRadius": 4,
+                                      "flex": 1,
+                                      "justifyContent": "center",
+                                      "paddingBottom": 25,
+                                      "textAlign": "center",
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    style={
+                                      Object {
+                                        "alignSelf": "center",
+                                        "color": "rgb(238, 167, 2)",
+                                        "fontFamily": "latoLightitalic",
+                                        "fontSize": 26,
+                                        "fontStyle": "normal",
+                                        "fontWeight": "600",
+                                        "marginTop": 22,
+                                        "textAlign": "center",
+                                      }
+                                    }
+                                  >
+                                    yyyyyyyyyyyyyyyyyyyyy
+                                  </Text>
+                                  <Text
+                                    ellipsizeMode="tail"
+                                    numberOfLines={2}
+                                    style={
+                                      Object {
+                                        "alignSelf": "center",
+                                        "color": "rgb(238, 167, 2)",
+                                        "display": "flex",
+                                        "fontFamily": "Roboto",
+                                        "fontSize": 15,
+                                        "fontStyle": "normal",
+                                        "fontWeight": "300",
+                                        "marginTop": -5,
+                                        "textAlign": "center",
+                                      }
+                                    }
+                                  >
+                                    Liebe BvB-ler*innen, Mitarbeiter*innen und Gäste,
+
+wir laden Sie/Euch herzlich zu unserem Abschlussfest am Dienstag, 25.6.2019 ein, um unseren Abschluss der BvB zu feiern und schön ausklingen zulassen.
+
+Das Fest beginnt um 13:00 Uhr im Freizeithaus.
+                                  </Text>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                        </RCTScrollView>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    pointerEvents="box-none"
+                  >
+                    <View
+                      accessibilityElementsHidden={false}
+                      importantForAccessibility="auto"
+                      onLayout={[Function]}
+                      pointerEvents="box-none"
+                      style={null}
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RNCSafeAreaView>
+</GestureHandlerRootView>
 `;
