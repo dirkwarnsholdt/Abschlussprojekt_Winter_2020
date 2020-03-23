@@ -9,8 +9,11 @@ import { DrawerItem } from '../../components/index'
 
 // Screens
 import HomeScreen from '../../screens/home/main'
-import NewsScreen from '../../screens/news/main'
-import OfferScreen from '../../screens/offer/main'
+
+
+// Navigator
+import NewsStackNavigation from './NewsStackNavigation'
+import OfferStackNavigation from './OfferStackNavigation'
 
 const WIDTH = Dimensions.get('window').width
 const DrawerConfig = {
@@ -58,7 +61,7 @@ const AppDrawerNavigation = createDrawerNavigator<Props>({
     }
   },
   News: {
-    screen: NewsScreen,
+    screen: NewsStackNavigation,
     navigationOptions: {
       header: null,
       drawerLabel: 'News',
@@ -72,7 +75,7 @@ const AppDrawerNavigation = createDrawerNavigator<Props>({
     }
   },
   Offer: {
-    screen: OfferScreen,
+    screen: OfferStackNavigation,
     navigationOptions: {
       header: null,
       drawerLabel: 'Angebote',
