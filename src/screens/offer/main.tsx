@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
+import { View, Button } from 'react-native'
 import { Container, Header, Text } from '../../components/index'
 
 class OfferScreen extends Component {
@@ -9,6 +9,12 @@ class OfferScreen extends Component {
         <Header />
         <View style={{ flex: 1 }}>
           <Text type='title'>Angebooooote</Text>
+          <Button
+            title='Throw Error!'
+            onPress={()=> {
+              throw new Error()
+            }}
+          />
         </View>
       </Container>
     )
