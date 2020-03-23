@@ -96,7 +96,7 @@ class NewsScreen extends PureComponent<Props, State> {
             keyExtractor={this._keyExtractor}
             renderItem={this._renderItem}
             ItemSeparatorComponent={this._renderSeparator}
-            showVerticalScrollIndicator={false}
+            // showVerticalScrollIndicator={false}
             onRefresh={this._handleListRefesh}
             refreshing={this.state.isRefreshing}
           />
