@@ -34,7 +34,7 @@ class NewsScreen extends PureComponent<Props, State> {
     return (
       <Container>
         <Header />
-        <View style={[styles.container, { alignItems: 'stretch' }]}>
+        <View style={styles.container}>
           ---- CONTENT ----
         </View>
       </Container>
