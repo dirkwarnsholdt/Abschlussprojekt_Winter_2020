@@ -9,7 +9,6 @@ import styles from './styles'
 type json = {
   id: number,
   title: string,
-  content: string,
   edited_by: number,
   created_at: Date,
   updated_at: Date
