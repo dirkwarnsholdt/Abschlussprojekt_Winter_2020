@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
-import { ActivityIndicator, View } from 'react-native'
+import { ActivityIndicator, View, FlatList } from 'react-native'
 import { NavigationScreenProp } from 'react-navigation'
-import { Container, Header, FlatList } from '../../components/index'
+import { Container, Header, FlatListItem } from '../../components/index'
 import theme from '../../config/theme.style'
 import styles from './styles'
 
@@ -27,7 +27,7 @@ class NewsScreen extends PureComponent<Props, State> {
 
   // having an unique id instead of an index or random number is preferable
   // for performance (prevents rerendering of whole screen once something changes)
-  _keyExtractor: any = (item: {}) => item.id.toString()
+  _keyExtractor: any = (item: any) => item.id.toString()
 
   // redirects to Detail
   _onPressItem: any = (id: number, title: string) => {
@@ -41,7 +41,7 @@ class NewsScreen extends PureComponent<Props, State> {
   }
 
   // creates a clickable FlatList Element
-  _renderItem = ({ item }) => (
+  _renderItem: any = ({ item }: any) => (
     <FlatListItem
       id={item.id}
       title={item.title}
@@ -49,6 +49,9 @@ class NewsScreen extends PureComponent<Props, State> {
       onPressItem={this._onPressItem}
     />
   )
+
+  // a view with border, essentially just a line as Separator
+  _renderSeparator: any = () => <View style={styles.itemSeparator} />
 
   render(): JSX.Element {
     if (this.state.isLoading) {
