@@ -7,22 +7,21 @@ exports[`renders HomeScreen correctly should match Snapshot 1`] = `
   <View
     style={
       Object {
+        "alignItems": "center",
         "flex": 1,
+        "justifyContent": "center",
+        "textAlign": "center",
       }
     }
   >
     <customText
+      color="rgb(238, 167, 2)"
       type="title"
     >
-      Title - Impact Font
-    </customText>
-    <customText
-      type="Caption"
-    >
-      Light Lato Caption text
+      Herzlich Willkommen!
     </customText>
     <customText>
-      Open up App.tsx to start working on your app!
+      Diese App ist Initiative von und für TSBWler. Aller Anfang ist schwer, besonders in einer so großen Einrichtung wie dem TSBW, kann es manchmal schwierig sein, sich zurecht zu finden. Um Dir dabei zu helfen, findest Du hier alles wichtige Rund ums TSBW.
     </customText>
   </View>
 </Container>

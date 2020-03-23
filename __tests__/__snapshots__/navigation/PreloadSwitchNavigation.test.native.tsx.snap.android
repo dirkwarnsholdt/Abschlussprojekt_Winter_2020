@@ -100,7 +100,7 @@ exports[`renders PreloadSwitchNavigation correctly should match Snapshot 1`] = `
                   "routeName": "News",
                   "routes": Array [
                     Object {
-                      "key": "id-1584950434596-0",
+                      "key": "id-1584952431560-0",
                       "routeName": "NewsScreen",
                     },
                   ],
@@ -113,7 +113,7 @@ exports[`renders PreloadSwitchNavigation correctly should match Snapshot 1`] = `
                   "routeName": "Offer",
                   "routes": Array [
                     Object {
-                      "key": "id-1584950434596-1",
+                      "key": "id-1584952431560-1",
                       "routeName": "OfferScreen",
                     },
                   ],
@@ -221,7 +221,7 @@ exports[`renders PreloadSwitchNavigation correctly should match Snapshot 1`] = `
                     "routeName": "News",
                     "routes": Array [
                       Object {
-                        "key": "id-1584950434596-0",
+                        "key": "id-1584952431560-0",
                         "routeName": "NewsScreen",
                       },
                     ],
@@ -234,7 +234,7 @@ exports[`renders PreloadSwitchNavigation correctly should match Snapshot 1`] = `
                     "routeName": "Offer",
                     "routes": Array [
                       Object {
-                        "key": "id-1584950434596-1",
+                        "key": "id-1584952431560-1",
                         "routeName": "OfferScreen",
                       },
                     ],

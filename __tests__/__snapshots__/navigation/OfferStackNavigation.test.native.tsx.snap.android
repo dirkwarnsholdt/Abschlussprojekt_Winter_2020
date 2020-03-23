@@ -52,7 +52,7 @@ exports[`renders OfferStackNavigation correctly should match Snapshot 1`] = `
           "key": "StackRouterRoot",
           "routes": Array [
             Object {
-              "key": "id-1584950442797-0",
+              "key": "id-1584952432367-0",
               "routeName": "OfferScreen",
             },
           ],
@@ -108,7 +108,7 @@ exports[`renders OfferStackNavigation correctly should match Snapshot 1`] = `
             "key": "StackRouterRoot",
             "routes": Array [
               Object {
-                "key": "id-1584950442797-0",
+                "key": "id-1584952432367-0",
                 "routeName": "OfferScreen",
               },
             ],

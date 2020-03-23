@@ -51,7 +51,7 @@ exports[`renders NewsStackNavigation correctly should match Snapshot 1`] = `
           "key": "StackRouterRoot",
           "routes": Array [
             Object {
-              "key": "id-1584950445078-0",
+              "key": "id-1584952449551-0",
               "routeName": "NewsScreen",
             },
           ],
@@ -106,7 +106,7 @@ exports[`renders NewsStackNavigation correctly should match Snapshot 1`] = `
             "key": "StackRouterRoot",
             "routes": Array [
               Object {
-                "key": "id-1584950445078-0",
+                "key": "id-1584952449551-0",
                 "routeName": "NewsScreen",
               },
             ],

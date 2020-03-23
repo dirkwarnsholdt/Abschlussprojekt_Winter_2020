@@ -82,7 +82,7 @@ exports[`renders AppDrawerNavigation correctly should match Snapshot 1`] = `
               "routeName": "News",
               "routes": Array [
                 Object {
-                  "key": "id-1584950443030-0",
+                  "key": "id-1584952434633-0",
                   "routeName": "NewsScreen",
                 },
               ],
@@ -95,7 +95,7 @@ exports[`renders AppDrawerNavigation correctly should match Snapshot 1`] = `
               "routeName": "Offer",
               "routes": Array [
                 Object {
-                  "key": "id-1584950443030-1",
+                  "key": "id-1584952434633-1",
                   "routeName": "OfferScreen",
                 },
               ],
@@ -184,7 +184,7 @@ exports[`renders AppDrawerNavigation correctly should match Snapshot 1`] = `
                 "routeName": "News",
                 "routes": Array [
                   Object {
-                    "key": "id-1584950443030-0",
+                    "key": "id-1584952434633-0",
                     "routeName": "NewsScreen",
                   },
                 ],
@@ -197,7 +197,7 @@ exports[`renders AppDrawerNavigation correctly should match Snapshot 1`] = `
                 "routeName": "Offer",
                 "routes": Array [
                   Object {
-                    "key": "id-1584950443030-1",
+                    "key": "id-1584952434633-1",
                     "routeName": "OfferScreen",
                   },
                 ],
