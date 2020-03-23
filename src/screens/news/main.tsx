@@ -29,6 +29,27 @@ class NewsScreen extends PureComponent<Props, State> {
   // for performance (prevents rerendering of whole screen once something changes)
   _keyExtractor: any = (item: {}) => item.id.toString()
 
+  // redirects to Detail
+  _onPressItem: any = (id: number, title: string) => {
+    this.props.navigation.navigate('DetailScreen', {
+      itemID: id,
+      itemTitle: title,
+      detailData: this.state.jsonData,
+      styleParam: 'news',
+      type: 'news'
+    })
+  }
+
+  // creates a clickable FlatList Element
+  _renderItem = ({ item }) => (
+    <FlatListItem
+      id={item.id}
+      title={item.title}
+      content={item.content}
+      onPressItem={this._onPressItem}
+    />
+  )
+
   render(): JSX.Element {
     if (this.state.isLoading) {
       return (
