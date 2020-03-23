@@ -4,17 +4,21 @@ import theme from '../../config/theme.style'
 import styles from './styles'
 
 type Props = {
-
+  onPressItem: (number, string, string)=> void,
+  id: number,
+  selected?: boolean,
+  title: ?string,
+  content: ?string
 }
 
 // Easier and nicer syntax in FlatList's from now on
 class FlatListItemTitle extends PureComponent<Props> {
-  _onPress = () => {
+  _onPress: any = (): void => {
     this.props.onPressItem(this.props.id, this.props.title, this.props.content)
   }
 
   // probaly take diff color than tint
-  render() {
+  render(): JSX.Element {
     const txtColor = this.props.selected ? theme.COLOR_TINT : theme.COLOR_PRIMARY
     return (
       <TouchableOpacity onPress={this._onPress}>
