@@ -2,9 +2,13 @@ import React, { Component } from 'react'
 import { Button, View } from 'react-native'
 import { Container, Header } from '../../components/index'
 
-class OfferScreen extends Component {
-  constructor() {
-    super()
+type State = {
+  isBroken: boolean
+}
+
+class OfferScreen extends Component<{}, State> {
+  constructor(props: any) {
+    super(props)
 
     this.state = {
       isBroken: false
