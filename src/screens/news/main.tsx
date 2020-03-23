@@ -22,7 +22,7 @@ type Props = {
 type State = {
   isLoading: boolean,
   isRefreshing: boolean,
-  jsonData: json
+  jsonData: json[]
 }
 
 class NewsScreen extends PureComponent<Props, State> {
@@ -38,7 +38,7 @@ class NewsScreen extends PureComponent<Props, State> {
   // fetches jsonObject from API => data.val
   _fetchData: any = (): void => {
     FetchNewsData()
-      .then((data: json) => {
+      .then((data: json[]) => {
         this.setState({
           isLoading: false,
           isRefreshing: false,
