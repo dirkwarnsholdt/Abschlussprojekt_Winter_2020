@@ -21,7 +21,7 @@ type State = {
 
 class OfferDetailScreen extends PureComponent<Props, State> {
   static navigationOptions: any = {
-    header: null
+    headerShown: false
   }
   constructor(props: Props) {
     super(props)
