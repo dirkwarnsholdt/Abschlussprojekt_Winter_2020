@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, TouchableOpacity, View } from 'react-native'
 import DynamicScrollView from '../DynamicScrollView/main'
-import styles from './styles.js'
+import styles from './styles'
 
 type Props = {
     error: Error,
