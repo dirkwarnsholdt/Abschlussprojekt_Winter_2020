@@ -3,7 +3,12 @@ import { Text, TouchableOpacity, View } from 'react-native'
 import DynamicScrollView from '../DynamicScrollView/main'
 import styles from '../../config/styles.js'
 
-const ErrSubstituteScreen = () => (
+type Props = {
+    error: Error,
+    resetError: ()=> void
+}
+
+const ErrSubstituteScreen = (props: Props): JSX.Element => (
   <DynamicScrollView color='grey'>
     <View style={styles.errorContainer}>
       <Text style={styles.errorHeader}>{'Es ist ein Fehler aufgetreten:'}</Text>
