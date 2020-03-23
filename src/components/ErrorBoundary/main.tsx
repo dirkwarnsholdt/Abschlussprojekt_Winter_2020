@@ -15,6 +15,10 @@ type State = {
 }
 
 class ErrorBoundary extends Component<Props, State> {
+  static defaultProps: any = {
+    ErrSubstituteScreen: ErrSubstituteScreen
+  }
+
   // fires error Event and catches err
   static getDerivedStateFromError(error: Error): {error: Error, hasError: boolean} {
     return { error, hasError: true }
