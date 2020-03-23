@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { ActivityIndicator, View } from 'react-native'
 import { NavigationScreenProp } from 'react-navigation'
-import { Container, Header } from '../../components/index'
+import { Container, Header, FlatList } from '../../components/index'
 import theme from '../../config/theme.style'
 import styles from './styles'
 
@@ -38,7 +38,16 @@ class NewsScreen extends PureComponent<Props, State> {
       <Container>
         <Header />
         <View style={styles.container}>
-          ---- CONTENT ----
+          <FlatList
+            contentContainerStyle={{ flexGrow: 1 }}
+            data={this.state.jsonData}
+            keyExtractor={this._keyExtractor}
+            renderItem={this._renderItem}
+            ItemSeparatorComponent={this._renderSeparator}
+            showVerticalScrollIndicator={false}
+            onRefresh={this._handleListRefesh}
+            refreshing={this.state.isRefreshing}
+          />
         </View>
       </Container>
     )
