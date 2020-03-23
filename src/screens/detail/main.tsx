@@ -29,8 +29,9 @@ class DetailScreen extends Component<Props, State> {
       },
       headerTitleStyle: {
         color: theme.COLOR_IVORY,
-        fontWeight: theme.FONT_WEIGHT_MEDIUM,
-        fontFamily: theme.FONT_FAMILY_CAPTION
+        fontFamily: theme.FONT_FAMILY_TITLE,
+        fontSize: theme.FONT_SIZE_MEDIUM,
+        fontWeight: theme.FONT_WEIGHT_LIGHT
       }
     }
   }
