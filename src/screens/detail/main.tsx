@@ -3,6 +3,7 @@ import { Image, Text, View } from 'react-native'
 import { NavigationScreenProp } from 'react-navigation'
 import { DynamicScrollView } from '../../components/index'
 import { unescapeString } from '../../lib/unescapeString'
+import { url } from '../../config/constants'
 import styles from './styles'
 import theme from '../../config/theme.style'
 
@@ -59,6 +60,36 @@ class DetailScreen extends Component<Props, State> {
 
     // used to manually 'unescape' string from API
     return unescapeString(string)
+  }
+
+  // creating correct url to fetch image from
+  _getCorrectImage: any = (): void => {
+    const { navigation } = this.props
+    const itemType: string | null = navigation.getParam('type', null)
+    const itemID: string | null = navigation.getParam('itemID', null)
+
+    if (!this.state.imageFetched) {
+      let imageUrl = ''
+
+      if (typeof itemType === 'string') {
+        imageUrl = url + '/files'
+
+        if (itemType === 'offer') {
+          imageUrl = imageUrl + '/offer_' + itemID + '.jpg'
+        }
+        if (itemType === 'offerDetail') {
+          imageUrl = imageUrl + '/offer_detail_' + itemID + '.jpg'
+        }
+        if (itemType === 'news') {
+          imageUrl = imageUrl + '/news_' + itemID + '.jpg'
+        }
+      }
+      this.setState({ imageFetched: true, imageUrl })
+    }
+  }
+
+  componentDidMount(): any {
+    this._getCorrectImage()
   }
 
   render(): JSX.Element {
