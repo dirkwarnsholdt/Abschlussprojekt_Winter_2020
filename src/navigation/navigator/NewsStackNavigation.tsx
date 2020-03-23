@@ -4,7 +4,7 @@ import NewsScreen from '../../screens/news/main'
 import DetailScreen from '../../screens/detail/main'
 
 
-const PeopleStackNavigation = createStackNavigator(
+const NewsStackNavigation = createStackNavigator(
   {
     NewsScreen: {
       screen: NewsScreen,
@@ -21,4 +21,4 @@ const PeopleStackNavigation = createStackNavigator(
   }
 )
 
-export default createAppContainer(PeopleStackNavigation)
+export default createAppContainer(NewsStackNavigation)
