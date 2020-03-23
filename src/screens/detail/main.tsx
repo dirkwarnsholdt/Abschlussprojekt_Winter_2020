@@ -25,7 +25,7 @@ class DetailScreen extends Component<Props, State> {
     return {
       title: navigation.state.params.itemTitle,
       headerStyle: {
-        backgroundColor: theme.COLOR_BACKGROUND
+        backgroundColor: theme.COLOR_HEADER
       },
       headerTitleStyle: {
         color: theme.COLOR_IVORY,
