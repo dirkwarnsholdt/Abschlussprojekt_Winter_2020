@@ -3,7 +3,7 @@ import { StatusBar } from 'react-native'
 import { PreloadSwitchNavigation } from './src/navigation/index'
 import { ErrorBoundary } from './src/components/index'
 
-class App extends Component {
+export default class App extends Component {
   componentDidMount(): void {
     StatusBar.setHidden(true)
   }
@@ -16,5 +16,3 @@ class App extends Component {
     )
   }
 }
-
-export default App
