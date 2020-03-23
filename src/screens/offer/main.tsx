@@ -11,8 +11,8 @@ class OfferScreen extends Component {
           <Text type='title'>Angebooooote</Text>
           <Button
             title='Throw Error!'
-            onPress={()=> {
-              throw new Error()
+            onPress={(): any => {
+              throw new Error('Button killed it!')
             }}
           />
         </View>
