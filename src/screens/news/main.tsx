@@ -1,72 +1,108 @@
-import React, { Component } from 'react'
-import { Container, DynamicScrollView, Header, Text } from '../../components/index'
+import React, { PureComponent } from 'react'
+import { ActivityIndicator, View, FlatList } from 'react-native'
+import { NavigationScreenProp } from 'react-navigation'
+import { Container, Header, FlatListItem } from '../../components/index'
+import theme from '../../config/theme.style'
+import styles from './styles'
+import dummyData from '../../lib/data'
 
-class NewsScreen extends Component {
+type Props = {
+  navigation: NavigationScreenProp<any, any>
+}
+
+type State = {
+  isLoading: boolean,
+  isRefreshing: boolean,
+  jsonData: {}[]
+}
+
+class NewsScreen extends PureComponent<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = {
+      isLoading: true,
+      jsonData: [],
+      isRefreshing: false
+    }
+  }
+
+  // fetches jsonObject from API => data.val
+  _fetchData: any = (): void => {
+    this.setState({
+      isLoading: false,
+      isRefreshing: false,
+      jsonData: dummyData
+    })
+  }
+
+  // fetching json from API in cDM
+  componentDidMount(): void {
+    this._fetchData()
+  }
+
+  // having an unique id instead of an index or random number is preferable
+  // for performance (prevents rerendering of whole screen once something changes)
+  _keyExtractor: any = (item: any) => item.id.toString()
+
+  // redirects to Detail
+  _onPressItem: any = (id: number, title: string) => {
+    this.props.navigation.navigate('DetailScreen', {
+      itemID: id,
+      itemTitle: title,
+      detailData: this.state.jsonData,
+      styleParam: 'news',
+      type: 'news'
+    })
+  }
+
+  // creates a clickable FlatList Element
+  _renderItem: any = ({ item }: any) => (
+    <FlatListItem
+      id={item.id}
+      title={item.title}
+      content={item.content}
+      onPressItem={this._onPressItem}
+    />
+  )
+
+  // a view with border, essentially just a line as Separator
+  _renderSeparator: any = () => <View style={styles.itemSeparator} />
+
+  // handles the PullDown @ y===0 => refresh json
+  // setState callback is called immediately after state change
+  _handleListRefesh: any = (): void => {
+    this.setState({
+      isRefreshing: true },
+    this._fetchData()
+    )
+  }
+
   render(): JSX.Element {
+    if (this.state.isLoading) {
+      return (
+        <Container>
+          <ActivityIndicator size='large' color={theme.COLOR_IVORY}/>
+        </Container>
+      )
+    }
+
     return (
       <Container>
         <Header />
-        <DynamicScrollView>
-          <Text type='title'>News</Text>
-          <Text> alot of text
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-          </Text>
-        </DynamicScrollView>
+        <View style={styles.container}>
+          <FlatList
+            contentContainerStyle={{ flexGrow: 1 }}
+            data={this.state.jsonData}
+            keyExtractor={this._keyExtractor}
+            renderItem={this._renderItem}
+            ItemSeparatorComponent={this._renderSeparator}
+            // showVerticalScrollIndicator={false}
+            onRefresh={this._handleListRefesh}
+            refreshing={this.state.isRefreshing}
+          />
+        </View>
       </Container>
     )
   }
 }
-
 export default NewsScreen
