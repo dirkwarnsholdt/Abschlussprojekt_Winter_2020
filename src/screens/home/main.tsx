@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
 import { Container, Header, HomeImage, Text } from '../../components/index'
+import strings from '../../config/strings'
+import styles from './styles'
+import theme from '../../config/theme.style'
 
 class HomeScreen extends Component {
   render(): JSX.Element {
@@ -8,10 +11,9 @@ class HomeScreen extends Component {
       <Container>
         <Header />
         <HomeImage />
-        <View style={{ flex: 1 }}>
-          <Text type='title'>Title - Impact Font</Text>
-          <Text type='Caption'>Light Lato Caption text</Text>
-          <Text>Open up App.tsx to start working on your app!</Text>
+        <View style={styles.container}>
+          <Text type='title' color={theme.COLOR_PRIMARY}>{strings.home.title}</Text>
+          <Text>{strings.home.body}</Text>
         </View>
       </Container>
     )
