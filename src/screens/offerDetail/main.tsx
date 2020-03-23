@@ -76,8 +76,8 @@ class OfferDetailScreen extends PureComponent<Props, State> {
   // for performance (prevents rerendering of whole screen once something changes)
   _keyExtractor: any = (item: any): string => item.id.toString()
 
-  _onPressSelect: any = (id: string): Map<any, any> => {
-    this.setState((state: any) => {
+  _onPressSelect: any = (id: string): any => {
+    this.setState((state: {selected: Map<any, any>}) => {
       // copy map instead of chaning state
       const selected = new Map(state.selected)
       selected.set(id, !selected.get(id)) // toggle selection
