@@ -24,7 +24,7 @@ class DetailScreen extends Component<Props, State> {
     return {
       title: navigation.state.params.itemTitle,
       headerStyle: {
-        backgroundColor: theme.BACKGROUND_COLOR
+        backgroundColor: theme.COLOR_BACKGROUND
       },
       headerTitleStyle: {
         color: theme.COLOR_IVORY,
@@ -34,8 +34,8 @@ class DetailScreen extends Component<Props, State> {
     }
   }
 
-  constructor() {
-    super()
+  constructor(props: any) {
+    super(props)
 
     this.state = {
       imageFetched: false,
@@ -43,7 +43,7 @@ class DetailScreen extends Component<Props, State> {
     }
   }
 
-  _getCorrectIndex = (detailData, itemID) => {
+  _getCorrectIndex: any = (detailData: any, itemID: number): number | null => {
     for (let i = 0; i < detailData.length; i++) {
       if (detailData[i].id === itemID) {
         return i
@@ -53,7 +53,7 @@ class DetailScreen extends Component<Props, State> {
   }
 
   // wrapping escape Sequences in {' '} to escape them
-  _getCorrectBodyText = (detailData, itemID) => {
+  _getCorrectBodyText: any = (detailData: any, itemID: number): string => {
     const index = this._getCorrectIndex(detailData, itemID)
     const string = (JSON.stringify(detailData[index].content)).slice(1, -1)
 
@@ -61,11 +61,7 @@ class DetailScreen extends Component<Props, State> {
     return unescapeString(string)
   }
 
-  componentDidMount() {
-    this._getCorrectImage()
-  }
-
-  render() {
+  render(): JSX.Element {
     const { navigation } = this.props
     const itemID = navigation.getParam('itemID', null)
     const detailData = navigation.getParam('detailData', [])
