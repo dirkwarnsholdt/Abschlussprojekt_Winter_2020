@@ -1,14 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component, ReactNode } from 'react'
 import ErrSubstituteScreen from '../ErrSubstituteScreen/main'
+
+// children => any basically
+type Props = {
+  children: ReactNode,
+  ErrSubstituteScreen: typeof ErrSubstituteScreen,
+  onError?: (error: Error, stackInfo: string)=> void,
+  _handleCatchError: (error: Error)=> void
+}
+
+type State = {
+  error?: Error,
+  hasError: boolean
+}
 
 class ErrorBoundary extends Component<Props, State> {
   // fires error Event and catches err
-  static getDerivedStateFromError(error: Error) {
+  static getDerivedStateFromError(error: Error): {error: Error, hasError: boolean} {
     return { error, hasError: true }
   }
 
-  constructor() {
-    super()
+  constructor(props: any) {
+    super(props)
 
     this.state = {
       error: null,
@@ -18,7 +31,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   // mb replace return { error, hasError: true }
   // but cant get 'this' or pass functions to lifeCycleMethod
-  _handleCatchError(error: Error) {
+  _handleCatchError(error: Error): void {
     this.setState({
       error,
       hasError: true
@@ -26,7 +39,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   // mb switch cDidCatch to some async method for performance. But since its an edge case its okay
-  componentDidCatch(error: Error, info: { componentStack: string }) {
+  componentDidCatch(error: Error, info: { componentStack: string }): void {
     if (typeof this.props.onError === 'function') {
       try {
         this.props.onError.call(this, error, info.componentStack)
@@ -35,17 +48,17 @@ class ErrorBoundary extends Component<Props, State> {
       }
     }
   }
-  resetError = () => {
+  resetError: any = (): void => {
     this.setState({
       error: null,
       hasError: false
     })
   }
 
-  render() {
+  render(): ReactNode {
     const { ErrSubstituteScreen } = this.props
 
-    return this.state.hasError && this.state.error
+    return this.state.hasError
       ? <ErrSubstituteScreen
         error={this.state.error}
         resetError={this.resetError}
