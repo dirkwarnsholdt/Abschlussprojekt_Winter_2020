@@ -25,6 +25,20 @@ class NewsScreen extends PureComponent<Props, State> {
     }
   }
 
+  // fetches jsonObject from API => data.val
+  _fetchData: any = (): void => {
+    this.setState({
+          isLoading: false,
+          isRefreshing: false,
+          jsonData: {}
+    })
+  }
+
+  // fetching json from API in cDM
+  componentDidMount(): void {
+    this._fetchData()
+  }
+
   // having an unique id instead of an index or random number is preferable
   // for performance (prevents rerendering of whole screen once something changes)
   _keyExtractor: any = (item: any) => item.id.toString()
@@ -52,6 +66,15 @@ class NewsScreen extends PureComponent<Props, State> {
 
   // a view with border, essentially just a line as Separator
   _renderSeparator: any = () => <View style={styles.itemSeparator} />
+
+  // handles the PullDown @ y===0 => refresh json
+  // setState callback is called immediately after state change
+  _handleListRefesh: any = (): void => {
+    this.setState({
+      isRefreshing: true },
+    this._fetchData()
+    )
+  }
 
   render(): JSX.Element {
     if (this.state.isLoading) {
