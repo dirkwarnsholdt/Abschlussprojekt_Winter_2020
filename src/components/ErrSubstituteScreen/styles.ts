@@ -3,7 +3,7 @@ import theme from '../../config/theme.style'
 
 const styles: any = StyleSheet.create({
   errorHeader: {
-    fontFamily: 'lato_lightitalic',
+    fontFamily: theme.FONT_FAMILY_CAPTION,
     fontSize: theme.FONT_SIZE_LARGE,
     fontStyle: 'normal',
     fontWeight: theme.FONT_WEIGHT_THIN,
@@ -11,7 +11,7 @@ const styles: any = StyleSheet.create({
     textAlign: 'center'
   } as TextStyle,
   errorInfo: {
-    fontFamily: 'lato_hairline',
+    fontFamily: theme.FONT_FAMILY_TEXT,
     fontSize: theme.FONT_SIZE_SMALL,
     fontStyle: 'normal',
     fontWeight: theme.FONT_WEIGHT_MEDIUM,
@@ -22,6 +22,12 @@ const styles: any = StyleSheet.create({
     flex: 1,
     marginHorizontal: 12,
     backgroundColor: theme.ERROR_BACKGROUND
+  } as TextStyle,
+  buttonText: {
+    color: '#fff',
+    fontSize: theme.FONT_SIZE_MEDIUM,
+    fontWeight: theme.FONT_WEIGHT_MEDIUM,
+    textAlign: 'center'
   } as TextStyle
 })
 
