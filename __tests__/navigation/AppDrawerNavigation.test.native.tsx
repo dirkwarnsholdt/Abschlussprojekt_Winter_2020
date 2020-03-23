@@ -1,10 +1,10 @@
 import React from 'react'
 import { AppDrawerNavigation } from '../../src/navigation/index.ts'
-import { shallow } from 'enzyme'
+import renderer from 'react-test-renderer';
 
 describe('renders AppDrawerNavigation correctly', () => {
   it('should match Snapshot', () => {
-    const wrapper = shallow(<AppDrawerNavigation />)
+    const wrapper = renderer.create(<AppDrawerNavigation />)
     expect(wrapper).toMatchSnapshot()
   })
 })

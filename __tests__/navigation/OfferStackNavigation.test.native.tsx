@@ -1,10 +1,10 @@
 import React from 'react'
 import { OfferStackNavigation } from '../../src/navigation/index.ts'
-import { shallow } from 'enzyme'
+import renderer from 'react-test-renderer';
 
 describe('renders OfferStackNavigation correctly', () => {
   it('should match Snapshot', () => {
-    const wrapper = shallow(<OfferStackNavigation />)
+    const wrapper = renderer.create(<OfferStackNavigation />)
     expect(wrapper).toMatchSnapshot()
   })
 })

@@ -1,10 +1,10 @@
 import React from 'react'
 import { PreloadSwitchNavigation } from '../../src/navigation/index.ts'
-import { shallow } from 'enzyme'
+import renderer from 'react-test-renderer';
 
 describe('renders PreloadSwitchNavigation correctly', () => {
   it('should match Snapshot', () => {
-    const wrapper = shallow(<PreloadSwitchNavigation />)
+    const wrapper = renderer.create(<PreloadSwitchNavigation />)
     expect(wrapper).toMatchSnapshot()
   })
 })
