@@ -110,7 +110,7 @@ class OfferDetailScreen extends PureComponent<Props, State> {
 
   // handles the PullDown @ y===0 => refresh json
   // setState callback is called immediately after state change
-  _handleListRefes: any = (): void => {
+  _handleListRefesh: any = (): void => {
     this.setState({
       isRefreshing: true },
     this._fetchData()
