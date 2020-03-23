@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import renderer from 'react-test-renderer'
-import { ErrorBoundary } from '../src/components/index'
+import { ErrorBoundary } from '../../src/components/index'
 
 describe('ErrorBoundary', () => {
   let consoleErrorSpy
