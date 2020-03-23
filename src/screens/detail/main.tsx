@@ -20,15 +20,6 @@ type State = {
 }
 
 class DetailScreen extends Component<Props, State> {
-  constructor() {
-    super()
-
-    this.state = {
-      imageFetched: false,
-      imageUrl: null
-    }
-  }
-
   static navigationOptions: any = ({ navigation }: {navigation: NavigationScreenProp<any>}): any => {
     return {
       title: navigation.state.params.itemTitle,
@@ -43,6 +34,15 @@ class DetailScreen extends Component<Props, State> {
     }
   }
 
+  constructor() {
+    super()
+
+    this.state = {
+      imageFetched: false,
+      imageUrl: null
+    }
+  }
+
   _getCorrectIndex = (detailData, itemID) => {
     for (let i = 0; i < detailData.length; i++) {
       if (detailData[i].id === itemID) {
@@ -53,10 +53,12 @@ class DetailScreen extends Component<Props, State> {
   }
 
   // wrapping escape Sequences in {' '} to escape them
-  _getCorrectTitleText = (detailData, itemID) => {
-    let index = this._getCorrectIndex(detailData, itemID)
-    let string = (JSON.stringify(detailData[index].title)).slice(1, -1)
-    return string
+  _getCorrectBodyText = (detailData, itemID) => {
+    const index = this._getCorrectIndex(detailData, itemID)
+    const string = (JSON.stringify(detailData[index].content)).slice(1, -1)
+
+    // used to manually 'unescape' string from API
+    return unescapeString(string)
   }
 
   componentDidMount() {
@@ -67,20 +69,14 @@ class DetailScreen extends Component<Props, State> {
     const { navigation } = this.props
     const itemID = navigation.getParam('itemID', null)
     const detailData = navigation.getParam('detailData', [])
-    const styles = this._getCorrectStyles(navigation.getParam('styleParam', 'default'))
 
-    // const titleText = this._getCorrectTitleText(detailData, itemID)
     const bodyText = this._getCorrectBodyText(detailData, itemID)
 
     return !itemID ?
       <View><Text> something bad happened... </Text></View> :
 
       <DynamicScrollView>
-        {/* removing Title since its in the Header, may have some usefullness but idk */}
         <View style={{ flex: 1 }}>
-          {/*   <View style={styles.titleContainer}> */}
-          {/*     <Text style={styles.titleText}>{titleText}</Text> */}
-          {/*   </View> */}
           <View style={styles.bodyContainer}>
             <Text style={styles.bodyText}>
               {bodyText}
