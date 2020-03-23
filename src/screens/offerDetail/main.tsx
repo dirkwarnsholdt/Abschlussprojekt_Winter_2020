@@ -2,9 +2,9 @@ import React, { PureComponent } from 'react'
 import { ActivityIndicator, View, FlatList } from 'react-native'
 import { NavigationScreenProp } from 'react-navigation'
 import { Container, HeaderBackTitle, FlatListItem } from '../../components/index'
-import { FetchOfferDetailData } from '../../service/index'
-import theme, { c4, c5 } from '../../config/theme.style'
-import styles from '../../config/styles'
+import theme from '../../config/theme.style'
+import styles from './styles'
+import dummyData from '../../lib/data'
 
 type Props = {
   navigation: NavigationScreenProp<any>
@@ -20,7 +20,7 @@ type State = {
 }
 
 class OfferDetailScreen extends PureComponent<Props, State> {
-  static navigationOptions = {
+  static navigationOptions: any = {
     header: null
   }
   constructor(props: Props) {
@@ -36,7 +36,7 @@ class OfferDetailScreen extends PureComponent<Props, State> {
   }
 
     // probaly decrepated since itemID usage is fixed now and I dont need the index anymore
-    _getCorrectIndex = (detailData, itemID) => {
+    _getCorrectIndex: any = (detailData: any, itemID: number): number | null => {
       for (let i = 0; i < detailData.length - 1; i++) {
         if (detailData[i].id === itemID) {
           return i
@@ -46,34 +46,27 @@ class OfferDetailScreen extends PureComponent<Props, State> {
     }
 
   // fetches jsonObject from API => data.val
-  _fetchData = () => {
-    const itemID = this.state.itemID
-    FetchOfferDetailData(itemID)
-      .then((data) => {
-        this.setState({
-          isLoading: false,
-          isRefreshing: false,
-          jsonData: data
-        })
-      })
-      .catch((error) => {
-        console.log(error)
-      })
+  _fetchData: any = (): void => {
+    this.setState({
+      isLoading: false,
+      isRefreshing: false,
+      jsonData: dummyData
+    })
   }
 
-  _saveItemID = (itemID: number) => {
+  _saveItemID: any = (itemID: number): void => {
     if (typeof itemID === 'number') {
       this.setState({ itemID })
     }
   }
 
-  _fixItemID = async (itemID: number) => {
+  _fixItemID: any = async (itemID: number): Promise<void> => {
     await this._saveItemID(itemID)
     await this._fetchData()
   }
 
   // fetching json from API in cDM
-  componentDidMount() {
+  componentDidMount(): void {
     const { navigation } = this.props
     const itemID = navigation.getParam('itemID', null)
     this._fixItemID(itemID)
@@ -81,10 +74,10 @@ class OfferDetailScreen extends PureComponent<Props, State> {
 
   // having an unique id instead of an index or random number is preferable
   // for performance (prevents rerendering of whole screen once something changes)
-  _keyExtractor = (item) => item.id.toString()
+  _keyExtractor: any = (item: any): string => item.id.toString()
 
-  _onPressSelect = (id: string) => {
-    this.setState((state) => {
+  _onPressSelect: any = (id: string): Map<any, any> => {
+    this.setState((state: any) => {
       // copy map instead of chaning state
       const selected = new Map(state.selected)
       selected.set(id, !selected.get(id)) // toggle selection
@@ -92,7 +85,7 @@ class OfferDetailScreen extends PureComponent<Props, State> {
     })
   }
 
-    _onPressItem = (id: number, title: string) => {
+    _onPressItem: any = (id: number, title: string): void => {
       this.props.navigation.navigate('DetailScreen', {
         itemID: id,
         itemTitle: title,
@@ -102,7 +95,7 @@ class OfferDetailScreen extends PureComponent<Props, State> {
     }
 
   // creates a clickable FlatList Element
-  _renderItem = ({ item }) => (
+  _renderItem: any = ({ item }: any): JSX.Element => (
     <FlatListItem
       id={item.id}
       title={item.title}
@@ -113,30 +106,30 @@ class OfferDetailScreen extends PureComponent<Props, State> {
   )
 
   // a view with border, essentially just a line as Separator
-  _renderSeparator = () => <View style={styles.itemSeparator} />
+  _renderSeparator: any = (): JSX.Element => <View style={styles.itemSeparator} />
 
   // handles the PullDown @ y===0 => refresh json
   // setState callback is called immediately after state change
-  _handleListRefesh = () => {
+  _handleListRefes: any = (): void => {
     this.setState({
       isRefreshing: true },
     this._fetchData()
     )
   }
-  render() {
+  render(): JSX.Element {
     const itemTitle = this.props.navigation.getParam('itemTitle', null)
 
     if (this.state.isLoading) {
       return (
-        <Container color={c4}>
+        <Container>
           <ActivityIndicator size='large' color={theme.COLOR_IVORY}/>
         </Container>
       )
     }
 
     return (
-      <Container color={c4}>
-        <HeaderBackTitle headerTitle={itemTitle} color={c5}/>
+      <Container>
+        <HeaderBackTitle headerTitle={itemTitle} />
         <View style={[styles.container, { alignItems: 'stretch' }]}>
           <FlatList
             contentContainerStyle={{ flexGrow: 1 }}
