@@ -1,4 +1,3 @@
-import { Response } from 'react'
 import { url } from '../../config/constants'
 
 interface ResponseType<T = any> extends Response {
