@@ -2,9 +2,18 @@ import React, { PureComponent } from 'react'
 import { ActivityIndicator, View, FlatList } from 'react-native'
 import { NavigationScreenProp } from 'react-navigation'
 import { Container, Header, FlatListItem } from '../../components/index'
+import { FetchNewsData } from '../../service/index'
 import theme from '../../config/theme.style'
 import styles from './styles'
-import dummyData from '../../lib/data'
+
+type json = {
+  id: number,
+  title: string,
+  content: string,
+  edited_by: number,
+  created_at: Date,
+  updated_at: Date
+}
 
 type Props = {
   navigation: NavigationScreenProp<any, any>
@@ -13,7 +22,7 @@ type Props = {
 type State = {
   isLoading: boolean,
   isRefreshing: boolean,
-  jsonData: {}[]
+  jsonData: json[]
 }
 
 class NewsScreen extends PureComponent<Props, State> {
@@ -28,11 +37,17 @@ class NewsScreen extends PureComponent<Props, State> {
 
   // fetches jsonObject from API => data.val
   _fetchData: any = (): void => {
-    this.setState({
-      isLoading: false,
-      isRefreshing: false,
-      jsonData: dummyData
-    })
+    FetchNewsData()
+      .then((data: json[]) => {
+        this.setState({
+          isLoading: false,
+          isRefreshing: false,
+          jsonData: data
+        })
+      })
+      .catch((error: Error) => {
+        console.log(error)
+      })
   }
 
   // fetching json from API in cDM
