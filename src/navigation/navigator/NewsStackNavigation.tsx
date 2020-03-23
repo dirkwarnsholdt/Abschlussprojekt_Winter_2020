@@ -9,7 +9,7 @@ const NewsStackNavigation = createStackNavigator(
     NewsScreen: {
       screen: NewsScreen,
       navigationOptions: {
-        header: null
+        headerShown: false
       }
     },
     DetailScreen: {

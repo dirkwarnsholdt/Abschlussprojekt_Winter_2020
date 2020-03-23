@@ -49,7 +49,7 @@ const AppDrawerNavigation = createDrawerNavigator<Props>({
   Home: {
     screen: HomeScreen,
     navigationOptions: {
-      header: null,
+      headerShown: false,
       drawerLabel: 'Home',
       drawerIcon: ({ focused }: boolean): JSX.Element => (
         <TabBarIcon
@@ -63,7 +63,7 @@ const AppDrawerNavigation = createDrawerNavigator<Props>({
   News: {
     screen: NewsStackNavigation,
     navigationOptions: {
-      header: null,
+      headerShown: false,
       drawerLabel: 'News',
       drawerIcon: ({ focused }: boolean): JSX.Element => (
         <TabBarIcon
@@ -77,7 +77,7 @@ const AppDrawerNavigation = createDrawerNavigator<Props>({
   Offer: {
     screen: OfferStackNavigation,
     navigationOptions: {
-      header: null,
+      headerShown: false,
       drawerLabel: 'Angebote',
       drawerIcon: ({ focused }: boolean): JSX.Element => (
         <TabBarIcon

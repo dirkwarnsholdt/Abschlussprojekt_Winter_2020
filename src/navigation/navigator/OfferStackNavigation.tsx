@@ -10,7 +10,7 @@ const OfferStackNavigation = createStackNavigator(
     OfferScreen: {
       screen: OfferScreen,
       navigationOptions: {
-        header: null
+        headerShown: false
       }
 
     },
