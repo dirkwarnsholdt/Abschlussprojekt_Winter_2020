@@ -4,11 +4,11 @@ import theme from '../../config/theme.style'
 import styles from './styles'
 
 type Props = {
-  onPressItem: (number, string, string)=> void,
+  onPressItem: (id: number, title: string, content: string)=> void,
   id: number,
   selected?: boolean,
-  title: ?string,
-  content: ?string
+  title?: string,
+  content?: string
 }
 
 // Easier and nicer syntax in FlatList's from now on
