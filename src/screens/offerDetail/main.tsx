@@ -2,9 +2,18 @@ import React, { PureComponent } from 'react'
 import { ActivityIndicator, View, FlatList } from 'react-native'
 import { NavigationScreenProp } from 'react-navigation'
 import { Container, HeaderBackTitle, FlatListItem } from '../../components/index'
+import { FetchOfferDetailData } from '../../service/index'
 import theme from '../../config/theme.style'
 import styles from './styles'
-import dummyData from '../../lib/data'
+
+type json = {
+  id: number,
+  title: string,
+  content: string,
+  edited_by: number,
+  created_at: Date,
+  updated_at: Date
+}
 
 type Props = {
   navigation: NavigationScreenProp<any>
@@ -14,7 +23,7 @@ type State = {
   isLoading: boolean,
   selected: Map<string, boolean>,
   isRefreshing: boolean,
-  jsonData: {}[],
+  jsonData: json[],
   detailData: {}[],
   itemID: number | null
 }
@@ -36,7 +45,7 @@ class OfferDetailScreen extends PureComponent<Props, State> {
   }
 
     // probaly decrepated since itemID usage is fixed now and I dont need the index anymore
-    _getCorrectIndex: any = (detailData: any, itemID: number): number | null => {
+    _getCorrectIndex: any = (detailData: any[], itemID: number): number | null => {
       for (let i = 0; i < detailData.length - 1; i++) {
         if (detailData[i].id === itemID) {
           return i
@@ -47,11 +56,17 @@ class OfferDetailScreen extends PureComponent<Props, State> {
 
   // fetches jsonObject from API => data.val
   _fetchData: any = (): void => {
-    this.setState({
-      isLoading: false,
-      isRefreshing: false,
-      jsonData: dummyData
-    })
+    FetchOfferDetailData()
+      .then((data: json[]) => {
+        this.setState({
+          isLoading: false,
+          isRefreshing: false,
+          jsonData: data
+        })
+      })
+      .catch((error: Error) => {
+        console.log(error)
+      })
   }
 
   _saveItemID: any = (itemID: number): void => {
