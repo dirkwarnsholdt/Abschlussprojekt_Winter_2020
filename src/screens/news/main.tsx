@@ -4,6 +4,7 @@ import { NavigationScreenProp } from 'react-navigation'
 import { Container, Header, FlatListItem } from '../../components/index'
 import theme from '../../config/theme.style'
 import styles from './styles'
+import dummyData from '../../lib/data'
 
 type Props = {
   navigation: NavigationScreenProp<any, any>
@@ -28,9 +29,9 @@ class NewsScreen extends PureComponent<Props, State> {
   // fetches jsonObject from API => data.val
   _fetchData: any = (): void => {
     this.setState({
-          isLoading: false,
-          isRefreshing: false,
-          jsonData: {}
+      isLoading: false,
+      isRefreshing: false,
+      jsonData: dummyData
     })
   }
 
