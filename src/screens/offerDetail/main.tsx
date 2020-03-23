@@ -56,7 +56,8 @@ class OfferDetailScreen extends PureComponent<Props, State> {
 
   // fetches jsonObject from API => data.val
   _fetchData: any = (): void => {
-    FetchOfferDetailData()
+    const itemID = this.state.itemID
+    FetchOfferDetailData(itemID)
       .then((data: json[]) => {
         this.setState({
           isLoading: false,
