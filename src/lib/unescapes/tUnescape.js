@@ -1,7 +1,7 @@
 // import React from 'react'
 // import { Text } from 'react-native'
 
-const tUnescape = (str: string) => {
+const tUnescape = (str: string): string => {
   // trying new approach;
   // just 'removing' the '\t'
   // instead of trying to indent somehow
