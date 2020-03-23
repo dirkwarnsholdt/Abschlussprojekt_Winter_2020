@@ -14,7 +14,7 @@ const ErrSubstituteScreen = (props: Props): JSX.Element => (
       <Text style={styles.errorHeader}>{'Es ist ein Fehler aufgetreten:'}</Text>
       <Text style={styles.errorInfo}>{props.error.toString()}</Text>
       <TouchableOpacity style={styles.button} onPress={props.resetError}>
-        <Text style={styles.buttonText}>{'App neustarten.'}</Text>
+        <Text style={styles.buttonText}>{'>App Neustarten<'}</Text>
       </TouchableOpacity>
     </View>
   </DynamicScrollView>
