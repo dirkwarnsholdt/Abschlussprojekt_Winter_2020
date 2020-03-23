@@ -43,6 +43,22 @@ class DetailScreen extends Component<Props, State> {
     }
   }
 
+  _getCorrectIndex = (detailData, itemID) => {
+    for (let i = 0; i < detailData.length; i++) {
+      if (detailData[i].id === itemID) {
+        return i
+      }
+    }
+    return null
+  }
+
+  // wrapping escape Sequences in {' '} to escape them
+  _getCorrectTitleText = (detailData, itemID) => {
+    let index = this._getCorrectIndex(detailData, itemID)
+    let string = (JSON.stringify(detailData[index].title)).slice(1, -1)
+    return string
+  }
+
   componentDidMount() {
     this._getCorrectImage()
   }
