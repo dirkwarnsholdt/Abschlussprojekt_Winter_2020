@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders PreloadSwitchNavigation correctly should match Snapshot 1`] = `
+<ContextProvider
+  value="light"
+>
+  <ContextProvider
+    value={
+      Object {
+        "_childrenNavigation": Object {},
+        "actions": Object {},
+        "addListener": [Function],
+        "dangerouslyGetParent": [Function],
+        "dispatch": [Function],
+        "getChildNavigation": [Function],
+        "getScreenProps": [Function],
+        "goBack": [Function],
+        "isFirstRouteInParent": [Function],
+        "isFocused": [Function],
+        "navigate": [Function],
+        "router": Object {
+          "childRouters": Object {
+            "App": Object {
+              "childRouters": Object {
+                "Home": null,
+                "News": Object {
+                  "childRouters": Object {
+                    "DetailScreen": null,
+                    "NewsScreen": null,
+                  },
+                  "getActionCreators": [Function],
+                  "getActionForPathAndParams": [Function],
+                  "getComponentForRouteName": [Function],
+                  "getComponentForState": [Function],
+                  "getPathAndParamsForState": [Function],
+                  "getScreenOptions": [Function],
+                  "getStateForAction": [Function],
+                },
+                "Offer": Object {
+                  "childRouters": Object {
+                    "DetailScreen": null,
+                    "OfferDetailsScreen": null,
+                    "OfferScreen": null,
+                  },
+                  "getActionCreators": [Function],
+                  "getActionForPathAndParams": [Function],
+                  "getComponentForRouteName": [Function],
+                  "getComponentForState": [Function],
+                  "getPathAndParamsForState": [Function],
+                  "getScreenOptions": [Function],
+                  "getStateForAction": [Function],
+                },
+              },
+              "getActionCreators": [Function],
+              "getActionForPathAndParams": [Function],
+              "getComponentForRouteName": [Function],
+              "getComponentForState": [Function],
+              "getPathAndParamsForState": [Function],
+              "getScreenOptions": [Function],
+              "getStateForAction": [Function],
+            },
+            "Loading": null,
+          },
+          "getActionCreators": [Function],
+          "getActionForPathAndParams": [Function],
+          "getComponentForRouteName": [Function],
+          "getComponentForState": [Function],
+          "getPathAndParamsForState": [Function],
+          "getScreenOptions": [Function],
+          "getStateForAction": [Function],
+        },
+        "setParams": [Function],
+        "state": Object {
+          "index": 0,
+          "isTransitioning": false,
+          "routes": Array [
+            Object {
+              "key": "Loading",
+              "params": undefined,
+              "routeName": "Loading",
+            },
+            Object {
+              "index": 0,
+              "isDrawerOpen": false,
+              "isTransitioning": false,
+              "key": "App",
+              "params": undefined,
+              "routeName": "App",
+              "routes": Array [
+                Object {
+                  "key": "Home",
+                  "params": undefined,
+                  "routeName": "Home",
+                },
+                Object {
+                  "index": 0,
+                  "isTransitioning": false,
+                  "key": "News",
+                  "params": undefined,
+                  "routeName": "News",
+                  "routes": Array [
+                    Object {
+                      "key": "id-1584950428962-0",
+                      "routeName": "NewsScreen",
+                    },
+                  ],
+                },
+                Object {
+                  "index": 0,
+                  "isTransitioning": false,
+                  "key": "Offer",
+                  "params": undefined,
+                  "routeName": "Offer",
+                  "routes": Array [
+                    Object {
+                      "key": "id-1584950428962-1",
+                      "routeName": "OfferScreen",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      }
+    }
+  >
+    <Navigator
+      navigation={
+        Object {
+          "_childrenNavigation": Object {},
+          "actions": Object {},
+          "addListener": [Function],
+          "dangerouslyGetParent": [Function],
+          "dispatch": [Function],
+          "getChildNavigation": [Function],
+          "getScreenProps": [Function],
+          "goBack": [Function],
+          "isFirstRouteInParent": [Function],
+          "isFocused": [Function],
+          "navigate": [Function],
+          "router": Object {
+            "childRouters": Object {
+              "App": Object {
+                "childRouters": Object {
+                  "Home": null,
+                  "News": Object {
+                    "childRouters": Object {
+                      "DetailScreen": null,
+                      "NewsScreen": null,
+                    },
+                    "getActionCreators": [Function],
+                    "getActionForPathAndParams": [Function],
+                    "getComponentForRouteName": [Function],
+                    "getComponentForState": [Function],
+                    "getPathAndParamsForState": [Function],
+                    "getScreenOptions": [Function],
+                    "getStateForAction": [Function],
+                  },
+                  "Offer": Object {
+                    "childRouters": Object {
+                      "DetailScreen": null,
+                      "OfferDetailsScreen": null,
+                      "OfferScreen": null,
+                    },
+                    "getActionCreators": [Function],
+                    "getActionForPathAndParams": [Function],
+                    "getComponentForRouteName": [Function],
+                    "getComponentForState": [Function],
+                    "getPathAndParamsForState": [Function],
+                    "getScreenOptions": [Function],
+                    "getStateForAction": [Function],
+                  },
+                },
+                "getActionCreators": [Function],
+                "getActionForPathAndParams": [Function],
+                "getComponentForRouteName": [Function],
+                "getComponentForState": [Function],
+                "getPathAndParamsForState": [Function],
+                "getScreenOptions": [Function],
+                "getStateForAction": [Function],
+              },
+              "Loading": null,
+            },
+            "getActionCreators": [Function],
+            "getActionForPathAndParams": [Function],
+            "getComponentForRouteName": [Function],
+            "getComponentForState": [Function],
+            "getPathAndParamsForState": [Function],
+            "getScreenOptions": [Function],
+            "getStateForAction": [Function],
+          },
+          "setParams": [Function],
+          "state": Object {
+            "index": 0,
+            "isTransitioning": false,
+            "routes": Array [
+              Object {
+                "key": "Loading",
+                "params": undefined,
+                "routeName": "Loading",
+              },
+              Object {
+                "index": 0,
+                "isDrawerOpen": false,
+                "isTransitioning": false,
+                "key": "App",
+                "params": undefined,
+                "routeName": "App",
+                "routes": Array [
+                  Object {
+                    "key": "Home",
+                    "params": undefined,
+                    "routeName": "Home",
+                  },
+                  Object {
+                    "index": 0,
+                    "isTransitioning": false,
+                    "key": "News",
+                    "params": undefined,
+                    "routeName": "News",
+                    "routes": Array [
+                      Object {
+                        "key": "id-1584950428962-0",
+                        "routeName": "NewsScreen",
+                      },
+                    ],
+                  },
+                  Object {
+                    "index": 0,
+                    "isTransitioning": false,
+                    "key": "Offer",
+                    "params": undefined,
+                    "routeName": "Offer",
+                    "routes": Array [
+                      Object {
+                        "key": "id-1584950428962-1",
+                        "routeName": "OfferScreen",
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        }
+      }
+      theme="light"
+    />
+  </ContextProvider>
+</ContextProvider>
+`;

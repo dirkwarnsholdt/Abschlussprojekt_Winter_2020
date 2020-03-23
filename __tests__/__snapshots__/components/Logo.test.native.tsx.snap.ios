@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Logo correctly should match Snapshot 1`] = `
+<Logo>
+  <Image
+    resizeMode="contain"
+    source={1}
+    style={
+      Object {
+        "alignSelf": "center",
+        "height": 45,
+      }
+    }
+  >
+    <Image
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "alignSelf": "center",
+          "height": 45,
+        }
+      }
+    />
+  </Image>
+</Logo>
+`;

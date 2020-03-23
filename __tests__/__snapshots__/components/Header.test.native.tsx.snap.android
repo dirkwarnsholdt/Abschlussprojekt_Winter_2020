@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Header correctly should match Snapshot 1`] = `
+<ForwardRef(Themed.Header)
+  barStyle="dark-content"
+  centerComponent={<Logo />}
+  containerStyle={
+    Object {
+      "alignContent": "center",
+      "alignItems": "center",
+      "backgroundColor": "rgb(35, 38, 40)",
+      "justifyContent": "center",
+    }
+  }
+  leftComponent={<withNavigation(DrawerIcon) />}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+/>
+`;
