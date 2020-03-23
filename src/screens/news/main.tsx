@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import { ActivityIndicator, View } from 'react-native'
 import { Container, Header } from '../../components/index'
 import theme from '../../config/theme.style'
-import styles from '../../config/styles'
+import styles from './styles'
 
 type Props = {
 
