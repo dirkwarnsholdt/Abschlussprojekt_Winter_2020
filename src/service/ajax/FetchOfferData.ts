@@ -5,6 +5,6 @@ interface ResponseType<T = any> extends Response {
 }
 
 export const FetchOfferData: any = (): {} => {
-  return fetch(url + '/news')
+  return fetch(url + '/offer')
     .then(async (response: ResponseType) => response.json())
 }
