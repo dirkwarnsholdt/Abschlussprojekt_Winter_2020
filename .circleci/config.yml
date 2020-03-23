@@ -28,6 +28,8 @@ jobs:
           command: |
             npx expo login -u $ExpoLogin -p $ExpoPassword &&
             npx expo build:android --release-channel $ReleaseChannel --no-publish --non-interactive
+          no_output_timeout: 15m
+
       - persist_to_workspace:
           root: ~/ProjektArbeit-FIAE
           paths:
