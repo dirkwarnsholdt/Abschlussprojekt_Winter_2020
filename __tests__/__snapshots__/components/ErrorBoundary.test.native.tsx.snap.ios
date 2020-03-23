@@ -101,7 +101,7 @@ exports[`ErrorBoundary should catch errors set the state and render the default 
                 }
               }
             >
-              App neustarten.
+              &gt;App Neustarten&lt;
             </Text>
           </View>
         </View>
@@ -212,7 +212,7 @@ exports[`ErrorBoundary should catch errors set the state render the FallbackComp
                 }
               }
             >
-              App neustarten.
+              &gt;App Neustarten&lt;
             </Text>
           </View>
         </View>
