@@ -2,80 +2,11 @@
 
 exports[`renders OfferScreen correctly should match Snapshot 1`] = `
 <Container>
-  <CustomHeader />
-  <View
-    style={
-      Object {
-        "alignContent": "center",
-        "alignItems": "stretch",
-        "flex": 1,
-        "justifyContent": "center",
-        "textAlign": "center",
-      }
-    }
-  >
-    <FlatList
-      ItemSeparatorComponent={[Function]}
-      contentContainerStyle={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-      data={
-        Array [
-          Object {
-            "content": "Liebe BvB-ler*innen, Mitarbeiter*innen und Gäste,
-
-wir laden Sie/Euch herzlich zu unserem Abschlussfest am Dienstag, 25.6.2019 ein, um unseren Abschluss der BvB zu feiern und schön ausklingen zulassen.
-
-Das Fest beginnt um 13:00 Uhr im Freizeithaus.",
-            "created_at": "2019-05-08 14:49:29",
-            "edited_by": 2,
-            "id": 6,
-            "title": "Abschlussfest der BvB",
-            "updated_at": "2019-08-09 09:05:05",
-          },
-          Object {
-            "content": "Liebe BvB-ler*innen, Mitarbeiter*innen und Gäste,
-
-wir laden Sie/Euch herzlich zu unserem Abschlussfest am Dienstag, 25.6.2019 ein, um unseren Abschluss der BvB zu feiern und schön ausklingen zulassen.
-
-Das Fest beginnt um 13:00 Uhr im Freizeithaus.",
-            "created_at": "2019-05-08 14:49:29",
-            "edited_by": 2,
-            "id": 8,
-            "title": "xxxxxxxxxxxxxxxxxx",
-            "updated_at": "2019-08-09 09:05:05",
-          },
-          Object {
-            "content": "Liebe BvB-ler*innen, Mitarbeiter*innen und Gäste,
-
-wir laden Sie/Euch herzlich zu unserem Abschlussfest am Dienstag, 25.6.2019 ein, um unseren Abschluss der BvB zu feiern und schön ausklingen zulassen.
-
-Das Fest beginnt um 13:00 Uhr im Freizeithaus.",
-            "created_at": "2019-05-08 14:49:29",
-            "edited_by": 2,
-            "id": 11,
-            "title": "yyyyyyyyyyyyyyyyyyyyy",
-            "updated_at": "2019-08-09 09:05:05",
-          },
-        ]
-      }
-      disableVirtualization={false}
-      horizontal={false}
-      initialNumToRender={10}
-      keyExtractor={[Function]}
-      maxToRenderPerBatch={10}
-      numColumns={1}
-      onEndReachedThreshold={2}
-      onRefresh={[Function]}
-      refreshing={false}
-      removeClippedSubviews={true}
-      renderItem={[Function]}
-      scrollEventThrottle={50}
-      updateCellsBatchingPeriod={50}
-      windowSize={21}
-    />
-  </View>
+  <ActivityIndicator
+    animating={true}
+    color="rgb(255, 255, 240)"
+    hidesWhenStopped={true}
+    size="large"
+  />
 </Container>
 `;
