@@ -25,6 +25,10 @@ class NewsScreen extends PureComponent<Props, State> {
     }
   }
 
+  // having an unique id instead of an index or random number is preferable
+  // for performance (prevents rerendering of whole screen once something changes)
+  _keyExtractor: any = (item: {}) => item.id.toString()
+
   render(): JSX.Element {
     if (this.state.isLoading) {
       return (
