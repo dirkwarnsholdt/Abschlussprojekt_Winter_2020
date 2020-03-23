@@ -4,7 +4,7 @@ interface ResponseType<T = any> extends Response {
   json<P = T>(): Promise<P>
 }
 
-export const FetchNewsData: any = (segment: number): {} => {
+export const FetchOfferDetailData: any = (segment: number): {} => {
   return fetch(url + '/offer_detail' + '/' + segment.toString())
     .then(async (response: ResponseType) => response.json())
 }
