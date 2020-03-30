@@ -12,7 +12,7 @@ type Props = {
 }
 
 // Easier and nicer syntax in FlatList's from now on
-class FlatListItemTitle extends PureComponent<Props> {
+class FlatListItem extends PureComponent<Props> {
   _onPress: any = (): void => {
     this.props.onPressItem(this.props.id, this.props.title, this.props.content)
   }
@@ -31,4 +31,4 @@ class FlatListItemTitle extends PureComponent<Props> {
   }
 }
 
-export default FlatListItemTitle
+export default FlatListItem

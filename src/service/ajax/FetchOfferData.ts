@@ -8,3 +8,4 @@ export const FetchOfferData: any = (): {} => {
   return fetch(url + '/offer')
     .then(async (response: ResponseType) => response.json())
 }
+

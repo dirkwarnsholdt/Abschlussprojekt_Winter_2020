@@ -10,10 +10,12 @@ class HomeScreen extends Component {
     return (
       <Container>
         <Header />
-        <HomeImage />
         <View style={styles.container}>
-          <Text type='title' color={theme.COLOR_PRIMARY}>{strings.home.title}</Text>
-          <Text>{strings.home.body}</Text>
+          <HomeImage />
+          <View style={styles.container}>
+            <Text type='title' color={theme.COLOR_PRIMARY}>{strings.home.title}</Text>
+            <Text>{strings.home.body}</Text>
+          </View>
         </View>
       </Container>
     )
