@@ -55,7 +55,7 @@ class DetailScreen extends Component<Props, State> {
   }
 
   // wrapping escape Sequences in {' '} to escape them
-  _getCorrectBodyText: any = (detailData: any, itemID: number): string => {
+  _getCorrectBodyText: any = (detailData: any, itemID: number): JSX.Element => {
     const index = this._getCorrectIndex(detailData, itemID)
     const string = (JSON.stringify(detailData[index].content)).slice(1, -1)
 
