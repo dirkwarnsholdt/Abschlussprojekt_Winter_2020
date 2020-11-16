@@ -3,7 +3,6 @@
     "name": "TSBW",
     "slug": "ProjektArbeit-FIAE",
     "privacy": "unlisted",
-    "sdkVersion": "36.0.0",
     "platforms": [
       "ios",
       "android"
@@ -11,7 +10,7 @@
     "android": {
       "package": "com.TSBW",
       "versionCode": 1
-      },
+    },
     "ios": {
       "bundleIdentifier": "com.TSBW",
       "supportsTablet": true

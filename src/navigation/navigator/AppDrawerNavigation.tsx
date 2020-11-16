@@ -14,6 +14,9 @@ import HomeScreen from '../../screens/home/main'
 // Navigator
 import NewsStackNavigation from './NewsStackNavigation'
 import OfferStackNavigation from './OfferStackNavigation'
+import TimeScreen from '../../screens/time/main'
+import GalleryScreen from '../../screens/gallery/main'
+import ContactPersonScreen from '../../screens/contactPerson/main'
 
 const WIDTH = Dimensions.get('window').width
 const DrawerConfig = {
@@ -84,6 +87,45 @@ const AppDrawerNavigation = createDrawerNavigator<Props>({
           class='MaterialIcons'
           focused={focused}
           name='local-offer'
+        />
+      )
+    }
+  },
+  ContactPerson: {
+    screen: ContactPersonScreen,
+    navigationOptions: {
+    drawerLabel: 'Ansprechpartner',
+    drawerIcon: ({ focused }: boolean): JSX.Element => (
+      <TabBarIcon
+        class='MaterialIcons'
+        focused={focused}
+        name='people'
+      />
+    )
+  }
+},
+  Time: {
+    screen: TimeScreen,
+    navigationOptions: {
+    drawerLabel: 'Öffnungszeiten',
+    drawerIcon: ({ focused }: boolean): JSX.Element => (
+      <TabBarIcon
+        class='MaterialIcons'
+        focused={focused}
+        name='access-time'
+      />
+    )
+  }
+},
+  Gallery: {
+    screen: GalleryScreen,
+    navigationOptions: {
+      drawerLabel: 'Galerie',
+      drawerIcon: ({ focused }: boolean): JSX.Element => (
+        <TabBarIcon
+          class='MaterialIcons'
+          focused={focused}
+          name='photo'
         />
       )
     }
