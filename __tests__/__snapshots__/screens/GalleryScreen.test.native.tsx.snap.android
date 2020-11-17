@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders GalleryScreen correctly should match Snapshot 1`] = `
+<Container>
+  <CustomHeader />
+  <ImageSlider
+    images={
+      Array [
+        1,
+        1,
+        1,
+        1,
+      ]
+    }
+  />
+</Container>
+`;

@@ -2,7 +2,7 @@
 
 exports[`renders DynamicScrollView-Body correctly should match Snapshot 1`] = `
 <DynamicScrollView>
-  <SafeAreaView
+  <ForwardRef(SafeAreaView)
     style={
       Object {
         "backgroundColor": "rgb(55, 58, 60)",
@@ -34,7 +34,7 @@ exports[`renders DynamicScrollView-Body correctly should match Snapshot 1`] = `
           barStyle="light-content"
           showHideTransition="fade"
         />
-        <ScrollViewMock
+        <ScrollView
           contentContainerStyle={
             Object {
               "flexGrow": 1,
@@ -101,9 +101,9 @@ exports[`renders DynamicScrollView-Body correctly should match Snapshot 1`] = `
               </View>
             </RCTScrollView>
           </RCTScrollView>
-        </ScrollViewMock>
+        </ScrollView>
       </RCTSafeAreaView>
     </RCTSafeAreaView>
-  </SafeAreaView>
+  </ForwardRef(SafeAreaView)>
 </DynamicScrollView>
 `;

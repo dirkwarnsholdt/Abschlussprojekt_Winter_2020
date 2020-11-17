@@ -76,7 +76,6 @@ exports[`ErrorBoundary should catch errors set the state and render the default 
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -186,7 +185,6 @@ exports[`ErrorBoundary should catch errors set the state render the FallbackComp
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
